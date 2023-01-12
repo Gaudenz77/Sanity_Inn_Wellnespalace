@@ -28,7 +28,7 @@
  
   <body>
   <?php
-  require "./includes/header_kling.php";
+  require "./includes/header.php";
   ?>
   <main>
 
@@ -38,7 +38,7 @@
 
 
   <?php
-  require '/home/petra/Documents/webdev_tools_documets/php_one/Stranger_Languages_Classes_PHP/includes/footer _kling.php';
+  require '/home/petra/Documents/webdev_tools_documets/php_one/Stranger_Languages_Classes_PHP/includes/footer.php';
   ?>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
