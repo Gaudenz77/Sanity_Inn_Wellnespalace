@@ -1,15 +1,19 @@
 body {
-margin-top:18%;
-background: url('../assets/img/klingon_city_in_fog_by_mylochka_d5ze1lb.png');
+margin-top: 15vh;;
+background:;
 width: 100%;
 height: auto;
 background-size:cover;
 background-repeat: no-repeat;
+font-family: 'Oxygen', sans-serif;
 font-family: 'Lexend Deca', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300;400;500;700;900&display=swap');
+.main {
+  margin-top: 120px;
+}
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300;400;500;700;900&family=Oxygen:wght@300;400;700&display=swap');
 @font-face {
   font-family: 'benguiatbold';
   src: url('../assets/benguiat_bold-webfont.woff2') format('woff2'),
@@ -19,24 +23,18 @@ font-family: 'Lexend Deca', sans-serif;
 
 } 
 
-
-
 #headerWrapper {
   position:fixed;
   width:100%;
   top:0;
-  height: 17rem; 
+  height: 20%; 
   z-index: 1;
   }
-
-#titlelead {
-  font-size: 80%;
-}
 
 .contenthead {
   border-radius: 15px;
   background-color: ;
-  font-family: 'benguiatbold';
+  font-family: 'Oxygen', sans-serif;
   
 }
 .content {
@@ -45,30 +43,6 @@ font-family: 'Lexend Deca', sans-serif;
   margin-top:435px;
   margin-bottom: 10%;
   border-radius: 40px;
-}
-
-.title-font-header {
-  font-family: 'benguiatbold';
-}
-
-.title-font-lead {
-  font-family: 'benguiatbold';
-  font-size: 25px;
-}
-
-.title-font-content {
-  font-family: 'benguiatbold';
-  font-size: 50px;
-  padding: 5px;
-}
-
-/* Title_font glow */
-
-.glow {
-  font-size: auto;
-  color: rgb(255, 7, 7);
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
 }
 
 .messageError {
@@ -89,7 +63,7 @@ font-family: 'Lexend Deca', sans-serif;
 }
 
 #footer1 {
-  position:sticky;
+  position:fixed;
   left: 0;
   bottom:0;
   width: 100%;
@@ -97,5 +71,17 @@ font-family: 'Lexend Deca', sans-serif;
   color: rgb(60, 127, 235);
   text-align: center;
 }
+
+.icongen {
+  font-size: 100px;
+}
+
+
+
+
+
+
+
+
 
 

@@ -16,12 +16,15 @@
     <style>
       body {
         margin-top:18%;
-        background: url('../assets/img/klingon_city_in_fog_by_mylochka_d5ze1lb.png');
+        background: url('');
         width: 100%;
         height: auto;
         background-size:cover;
         background-repeat: no-repeat;
         font-family: 'Lexend Deca', sans-serif;
       }
-    </style>
+
+
+</style>
+   
   </head>

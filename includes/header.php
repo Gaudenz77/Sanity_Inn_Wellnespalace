@@ -4,8 +4,7 @@
           <div class="row m-3">
 
             <div class="col m-1 p-2 title-font-header contenthead">
-              <h1 class="glow" style="text-align:left">Stranger Tongues&#8482;</h1>
-              <p id="titlelead" style="text-align:left;">Stranger Tongues&#8482; - strange language-classes for special people!<span style="float:right; font-size:x-large;">Welcome yalls!</span></p>
+              <h1 class="glow" style="text-align:left">SANITY-INN-Wellness-Palace ©</h1>
             </div>
           </div>
      
