@@ -1,13 +1,4 @@
-<?php
-  require 'includes/head.php';
-  ?>
- 
-  <body>
-  <?php
-  require "./includes/header.php";
-  ?>
-  
-  <main>
+<main>
     <div class="container main">
       <div class="row justify-content-evenly">
         <div class="col-sm bg-secondary">
@@ -20,25 +11,29 @@
                   <span id="sliderValue">50</span>
                 </p> -->
     
-          <i class="fa-solid fa-heart-circle-plus icongen"></i>
-          <i class="fa-solid fa-dumbbell icongen"></i>
-        </div>
-        <div class="col-sm bg-secondary">
-            <label for="slider">Slider 1 to 5:</label>
-              <input type="range" min="0" max="5" step="1" value="5" id="slider"  class="slider">
-              <div class="slider-icon">
-              <img src="./assets/img/keyboard-solid.svg" alt="Icon">
-                </div>
-              <span id="sliderValue">half</span>
-                  <script>
-                    var slider = document.getElementById("slider");
-                    var output = document.getElementById("sliderValue");
-                    output.innerHTML = slider.value;
 
-                    slider.oninput = function() {
-                      output.innerHTML = this.value;
-                    }
-                  </script>
+
+<!--  wir holen php den session-value raus, wenn keine Eingabe(empty) if-bedingung =  $value="3" -->  
+
+<!-- Javascript-Validierung -->
+
+          <i class="fa-solid fa-heart-circle-plus icongen"></i>
+          <i class="fa-solid fa-dumbbell icongen"><?php $value = 3; ?></i>
+            </div>
+            <div class="col-sm bg-secondary">
+              <label for="slider">Slider 1 to 5:</label>
+              <p><br></p>
+              <input type="range" min="1" max="5" step="1" value="<?php $value ?>" id="slider"  class="slider">
+              <p><br></p>
+              <span id="sliderValue"></span>
+
+<!-- Press "next/weiter"-Button: name => $value to PHP-Session  -->
+<!-- Back link einfügen // Reset-Button um Clear-Session einzuleiten und restart homepage -->              
+
+     
+
+
+
 
         </div>
       </div>
@@ -47,13 +42,15 @@
   
 </main>
 
+<?php 
+require 'includes/head.php';
+require "./includes/header.php";
+require 'includes/include_javascript.php';
+require 'includes/include_styles.php';
+require 'includes/footer.php'
+?>
 
-  <?php
-  require 'includes/footer.php';
-  ?>
-  <?php
-  require 'includes/include_javascript.php';
-  ?>
+
 
 
 </body>
