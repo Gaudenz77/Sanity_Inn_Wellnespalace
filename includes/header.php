@@ -1,5 +1,5 @@
 
-    <header id="headerWrapper" class="p-2 bg-dark text-bg-light">
+    <header id="headerWrapper" class="p-2 bg-light text-bg-light">
       <div  class="container">
           <div class="row m-3">
 
@@ -12,16 +12,10 @@
           <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
             
                 <ul class="nav col-12 col-lg-auto me-lg-auto justify-content-center mb-md-auto">
-                  <li><a href="index.php" class="nav-link px-2 text-white">Homepage</a></li>
-                  <li><a href="index_elves.php" class="nav-link px-2 text-white">Elvspeak</a></li>
-                  <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                  <li><a href="index.php" class="nav-link px-2">Homepage</a></li>
+                  <li><a href="index_elves.php" class="nav-link px-2">Elvspeak</a></li>
+                  <li><a href="#" class="nav-link px-2">Pricing</a></li>
                 </ul>
-
-          <div class="text-end">
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-              <a href="index.php" type="button" class="btn btn-warning">Klingon</a>
-              <a href="index_elves.php" type="button" class="btn btn-success">Elvspeak</a>
-            </div>
           </div>
         </div>
       </div>
