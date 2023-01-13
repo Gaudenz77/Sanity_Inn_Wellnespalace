@@ -12,7 +12,7 @@
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <script src="./js/main.js" defer></script>
     <script src="./js/confirmation.js"></script>
-    <title>Stranger Tongues - Language Classes/Klingon</title>
+    <title>SANITY-INN-Wellness-Palace</title>
     <style>
       body {
         margin-top:18%;
