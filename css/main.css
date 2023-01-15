@@ -13,7 +13,7 @@ font-family: 'Lexend Deca', sans-serif;
   margin-top: 120px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300;400;500;700;900&family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lexend+Deca:wght@100;300;400;500;700;900&family=Oxygen:wght@300;400;700&display=swap');
 @font-face {
   font-family: 'benguiatbold';
   src: url('../assets/benguiat_bold-webfont.woff2') format('woff2'),
