@@ -5,9 +5,8 @@ width: 100%;
 height: auto;
 background-size:cover;
 background-repeat: no-repeat;
-font-family: 'Abril Fatface', cursive;
-font-family: 'Lexend Deca', sans-serif;
-font-family: 'Oxygen', sans-serif;
+/* font-family: 'Lexend Deca', sans-serif;
+font-family: 'Oxygen', sans-serif; */
 }
 
 .main {
@@ -35,7 +34,6 @@ font-family: 'Oxygen', sans-serif;
 .contenthead {
   border-radius: 15px;
   background-color: ;
-  font-family: 'Abril Fatface', sans-serif;
   font-weight: bold;
   
 }

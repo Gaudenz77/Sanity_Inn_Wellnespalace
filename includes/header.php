@@ -4,7 +4,7 @@
           <div class="row m-3">
 
             <div class="col m-1 p-2 title-font-header contenthead">
-              <h1 class="glow" style="text-align:left">SANITY-INN-Wellness-Palace ©</h1>
+              <h1 class="glow" style="text-align:left; font-family: 'Abril Fatface', sans-serif;">SANITY-INN-Wellness-Palace ©</h1>
             </div>
           </div>
      
