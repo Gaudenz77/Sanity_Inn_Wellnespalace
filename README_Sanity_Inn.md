@@ -19,7 +19,7 @@ In my project i offer two possinbel language classes, "Klingon" or "Elvespeak" (
 ----
 ## Usage
 
-* go to [Github](https://github.com/Gaudenz77/countdownalpha01) or
+* go to [Github](https://github.com/Gaudenz77/Sanity_Inn_Wellnespalace) or
 * get the website-link directly (if hosted), by qr-code, google-search and so on...
 * on the homepage one is led straightforward to the form
 * fill out the form and press submit. If everything i correct, an alert shows up.
@@ -41,5 +41,5 @@ In my project i offer two possinbel language classes, "Klingon" or "Elvespeak" (
 * Internet for research
 * co-trainees for hearing my questions
 * Github (for file repo/sharing/workflow)
-* [Miro](https://miro.com/app/board/uXjVP5Gbswc=/?share_link_id=491420144069)
+* [Miro](https://miro.com/app/board/uXjVPzeoPiY=/?share_link_id=217846515948)
 ----
