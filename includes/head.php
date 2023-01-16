@@ -23,11 +23,7 @@
         height: auto;
         background-size:cover;
         background-repeat: no-repeat;
-        font-family: 'Lexend Deca', sans-serif;
       }
-      
-
-
 </style>
    
   </head>

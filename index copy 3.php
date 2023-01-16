@@ -1,21 +1,10 @@
-<?php require "./includes/header.php"; ?> 
-<?php require "./includes/head.php"; ?>
-
-
-<?php require './includes/data-collector.php'; ?>
-<?php session_destroy();?>
+<?php require 'includes/head.php'; ?>
+<?php require 'includes/data-collector.php'; ?>
 <main>
     <div class="container main">
       <div class="row">
-      <h1>index copy 2</h1>
-      <form action="./index copy 3.php" method="post">
-      vorname: <input type="text" name="name"><br>
-      alter: <input type="text" name="number"><br>
-      <input type='hidden' name='lastPageID' value='question2'>
-      <input type="submit">
-      </form>
-
-
+      <h1>index copy 3</h1>
+     
 
 <!--  wir holen php den session-value raus, wenn keine Eingabe(empty) if-bedingung =  $value="3" -->  
 
@@ -86,7 +75,7 @@
 </main>
 
 <?php 
-
+require "./includes/header.php";
 require 'includes/include_javascript.php';
 require 'includes/footer.php'
 ?>
