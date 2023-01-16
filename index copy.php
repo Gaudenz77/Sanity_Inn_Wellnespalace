@@ -1,7 +1,7 @@
 <main>
     <div class="container main">
       <div class="row">
-        <h1>index copy</h1>
+      <h1>index copy</h1>
       <form action="./index copy 2.php" method="post">
       Name: <input type="text" name="name"><br>
       E-mail: <input type="text" name="email"><br>
