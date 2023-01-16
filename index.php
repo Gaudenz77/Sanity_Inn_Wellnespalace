@@ -13,16 +13,16 @@
         require 'includes/include_styles.php';
         require './includes/pseudo01.php';
         $seite =  1;
-        $question = 'question'. $seite;
         
         $survey = $questions[$seite]["question"];
 
-        echo "<div class='col-sm bg-secondary'>
+        echo "<div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
+              $type = $questions[$seite]["type"];
+              $id = $questions[$seite]["id"];
+
               for($i=0; $i < count($questions[$seite]["value"]);$i++){
-                $type = $questions[$seite]["type"];
-                $id = $questions[$seite]["id"];
 
                 /* if bedingung ob in der session existiert */
                 $value = $questions[$seite]["value"][$i]; 
@@ -32,10 +32,10 @@
                   $min = $questions[$seite]["min"];
                   $max = $questions[$seite]["max"];
 
-                  echo "min=$min max=$max";
+                  echo "min='$min' max='$max'";
                 }
                 echo "step='1' value='$value' id=$id  class='slider'>
-                       <label for='slider'>$value</label>";
+                       <label for='slider'>$value</label><br>";
               }
        
               
