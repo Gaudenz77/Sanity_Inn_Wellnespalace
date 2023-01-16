@@ -1,4 +1,8 @@
-<?php require 'includes/head.php'; ?>
+<?php require "./includes/header.php"; ?> 
+<?php require "./includes/head.php"; ?>
+
+
+<?php require './includes/data-collector.php'; ?>
 <?php session_destroy();?>
 <main>
     <div class="container main">
@@ -7,6 +11,7 @@
       <form action="./index copy 3.php" method="post">
       vorname: <input type="text" name="name"><br>
       alter: <input type="text" name="number"><br>
+      <input type='hidden' name='lastPageID' value='question2'>
       <input type="submit">
       </form>
 
@@ -81,7 +86,7 @@
 </main>
 
 <?php 
-require "./includes/header.php";
+
 require 'includes/include_javascript.php';
 require 'includes/footer.php'
 ?>

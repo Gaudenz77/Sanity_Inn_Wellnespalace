@@ -75,6 +75,15 @@ font-family: 'Oxygen', sans-serif; */
   font-size: 50px;
 }
 
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  width: 30%;
+}
+
 
 
 

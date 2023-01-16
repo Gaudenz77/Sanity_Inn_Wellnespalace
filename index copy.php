@@ -1,4 +1,6 @@
-<?php require 'includes/head.php'; ?>
+<?php 
+require 'includes/head.php'; 
+require 'includes/data-collector.php'; ?>
 <main>
     <div class="container main">
       <div class="row">
@@ -6,6 +8,7 @@
       <form action="./index copy 2.php" method="post">
       vorname: <input type="text" name="name"><br>
       alter: <input type="text" name="number"><br>
+      <input type='hidden' name='lastPageID' value='question1'>
       <input type="submit">
       </form>
 
@@ -53,6 +56,11 @@
               <button type='button' class='btn btn-warning'>Neu Start</button>
               <button type='button' class='btn btn-success'>Weiter</button>
               </div>
+              <div class='button-container'>
+                  <button class='btn btn-danger'>Button 1</button>
+                  <button class='btn btn-warning'>Button 2</button>
+                  <button class='btn btn-success'>Button 3</button>
+            </div>
               ";
         ?>
 
