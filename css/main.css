@@ -1,13 +1,19 @@
 body {
-margin-top:18%;
-background: url('../assets/img/klingon_city_in_fog_by_mylochka_d5ze1lb.png');
+margin-top: 15vh;;
+background:;
 width: 100%;
 height: auto;
 background-size:cover;
 background-repeat: no-repeat;
-font-family: 'Lexend Deca', sans-serif;
+/* font-family: 'Lexend Deca', sans-serif;
+font-family: 'Oxygen', sans-serif; */
 }
 
+.main {
+  margin-top: 120px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lexend+Deca:wght@100;300;400;500;700;900&family=Oxygen:wght@300;400;700&display=swap');
 @font-face {
   font-family: 'benguiatbold';
   src: url('../assets/benguiat_bold-webfont.woff2') format('woff2'),
@@ -17,95 +23,26 @@ font-family: 'Lexend Deca', sans-serif;
 
 } 
 
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;300;400;500;700;900&display=swap');
-
 #headerWrapper {
   position:fixed;
   width:100%;
   top:0;
-  height: 17rem; 
+  height: 20%; 
   z-index: 1;
   }
 
-/* heder test*/
-#headerWrapper2 {
-    position:fixed;
-    width:100%;
-    top:0;
-    height: 17rem; 
-    z-index: 1;
-    }
-
-#titlelead {
-  font-size: 80%;
-}
-
-/* lead test*/
-#titlelead2 {
-  font-size: 80%;
-}
-
 .contenthead {
   border-radius: 15px;
-  background-color:#E4A11B ;
+  background-color: ;
+  font-weight: bold;
   
 }
-
-.contenthead2 {
-  border-radius: 15px;
-  background-color: #067906;
-  
-}
-
 .content {
   background-color:#E4A11B ;
   opacity: 95%;
   margin-top:435px;
   margin-bottom: 10%;
   border-radius: 40px;
-}
-
-/* elvish */
-.content2 {
-  background-color:#067906 ;
-  opacity: 95%;
-  margin-top:435px;
-  margin-bottom: 10%;
-  border-radius: 40px;
-}
-
-.title-font-header {
-  font-family: 'benguiatbold';
-}
-
-.title-font-lead {
-  font-family: 'benguiatbold';
-  font-size: 25px;
-}
-
-.title-font-content {
-  font-family: 'benguiatbold';
-  font-size: 50px;
-  padding: 5px;
-}
-
-/* Title_font glow */
-
-.glow {
-  font-size: auto;
-  color: rgb(255, 7, 7);
-  text-align: center;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60008, 0 0 40px #e60008, 0 0 50px #e60008, 0 0 60px #e60008, 0 0 70px #e60008;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
 }
 
 .messageError {
@@ -121,65 +58,31 @@ font-family: 'Lexend Deca', sans-serif;
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-/* klingon 1 Klingon */
-#klingon_01 {
-  position:absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    width: 35vh;
-    border-style:inset;
-    border-width: 10px;
-    border-color:#E4A11B;
-}
-
-/*second page Klingon 2 Elvespeak*/
-#klingon_02 {
-  position:absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    width: 35vh;
-    border-style:inset;
-    border-width: 10px;
-    border-color: #067906;
-}
-
 .formfield-1 {
   margin-top: 5vh;
 }
 
-.confirmationLabel {
-  font-weight: bold;
-}
-
-#footer {
-  position:sticky;
-  left: 0;
-  bottom:0;
-  width: 100%;
-  color: white;
-  text-align: center;
-}
-
 #footer1 {
-  position:sticky;
+  position:fixed;
   left: 0;
   bottom:0;
   width: 100%;
-  background-color:#E4A11B;
-  color: white;
+  background-color:#ffffff;
+  color: rgb(60, 127, 235);
   text-align: center;
 }
 
-/* footer 2 */
-
-#footer2 {
-  position:sticky;
-  left: 0;
-  bottom:0;
-  width: 100%;
-  background-color: #067906;
-  color: white;
-  text-align: center;
+.icongen {
+  font-size: 50px;
 }
+
+
+
+
+
+
+
+
+
 
 
