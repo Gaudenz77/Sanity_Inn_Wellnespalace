@@ -1,15 +1,7 @@
 <main>
     <div class="container main">
-      <div class="row justify-content-evenly">
-        <div class="col-sm bg-secondary">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptatum a consequuntur inventore optio nostrum quaerat, eos nam impedit? Iste odio eos corporis harum in magni ipsam laudantium quas perferendis.
-          <!--       <p>
-                  <label for="slider">Select a value:</label>
-                  <div class="slider-icon-container">
-                  <input type="range" min="0" max="100" step="10" value="50" id="slider"> 
-                  </div>
-                  <span id="sliderValue">50</span>
-                </p> -->
+      <div class="row">
+        
     
 
 
@@ -17,15 +9,56 @@
 
 <!-- Javascript-Validierung -->
 
-          <i class="fa-solid fa-heart-circle-plus icongen"></i>
-          <i class="fa-solid fa-dumbbell icongen"><?php $value = 3; ?></i>
-            </div>
-            <div class="col-sm bg-secondary">
-              <label for="slider">Slider 1 to 5:</label>
-              <p><br></p>
-              <input type="range" min="1" max="5" step="1" value="<?php $value ?>" id="slider"  class="slider">
-              <p><br></p>
-              <span id="sliderValue"></span>
+        <?php
+        require 'includes/include_styles.php';
+        require './includes/pseudo01.php';
+        $seite =  1;
+        
+        $survey = $questions[$seite]["question"];
+
+        echo "<div class='col-sm bg-secondary p-5'>
+              $survey
+              <p><br></p>";
+              $type = $questions[$seite]["type"];
+              $id = $questions[$seite]["id"];
+
+              for($i=0; $i < count($questions[$seite]["value"]);$i++){
+
+                /* if bedingung ob in der session existiert */
+                $value = $questions[$seite]["value"][$i]; 
+
+                echo  "<input type=$type name=$id";
+                if ($type !== 'radio' || $type !== 'checkbox' ){
+                  $min = $questions[$seite]["min"];
+                  $max = $questions[$seite]["max"];
+
+                  echo "min='$min' max='$max'";
+                }
+                echo "step='1' value='$value' id=$id  class='slider'>
+                       <label for='slider'>$value</label><br>";
+              }
+       
+              
+        echo
+              "<p><br></p>
+              <span id='sliderValue'></span><br>
+              <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
+              <button type='button' class='btn btn-danger'>Zurück</button>
+              <button type='button' class='btn btn-warning'>Neu Start</button>
+              <button type='button' class='btn btn-success'>Weiter</button>
+              </div>
+              ";
+        ?>
+
+
+          
+          
+            
+            
+             
+              
+              
+              
 
 <!-- Press "next/weiter"-Button: name => $value to PHP-Session  -->
 <!-- Back link einfügen // Reset-Button um Clear-Session einzuleiten und restart homepage -->              
@@ -35,18 +68,15 @@
 
 
 
-        </div>
+
       </div>
     </div>
-
-  
 </main>
 
 <?php 
 require 'includes/head.php';
 require "./includes/header.php";
 require 'includes/include_javascript.php';
-require 'includes/include_styles.php';
 require 'includes/footer.php'
 ?>
 
