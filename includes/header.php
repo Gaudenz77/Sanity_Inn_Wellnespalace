@@ -1,5 +1,5 @@
 
-    <header id="headerWrapper" class="p-2 bg-light text-bg-light">
+    <header id="headerWrapper" class="p-2 text-bg-light">
       <div  class="container">
           <div class="row m-3">
 

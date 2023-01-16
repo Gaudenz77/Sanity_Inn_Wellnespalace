@@ -25,6 +25,7 @@
         background-repeat: no-repeat;
         font-family: 'Lexend Deca', sans-serif;
       }
+      
 
 
 </style>

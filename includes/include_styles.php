@@ -1,7 +1,7 @@
 <style>
                 .slider {
   -webkit-appearance: none;
-  width: 100%;
+  width: 50%;
   height: 5px;
   border-radius: 5px;
   background: #FFFFFF;
