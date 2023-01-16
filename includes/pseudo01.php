@@ -1,28 +1,31 @@
 <?php
 $questions = array(
-    "question01" => array(
-        "question" => "Wie gesund bist du körperlich?",
-        /* id => question01, */
-        "type" => "Slider",
+    array(
+        "id" => "question1",
+        "question" => "Wie gesund bist du körperlich?", 
+        "type" => "range",
         "min" => 1,
         "max" => 5,
-        "value" => 3
+        "value" => array(3)
     ),
-    "question02" => array(
+    array(
+        "id" => "question2",
         "question" => " Nimmst du Nahrungsergänzungsmittel?",
-        "type" => "Slider",
+        "type" => "radio",
         "value" => array("ja","nein")
     ),
-    "question03" => array(
+    array(
+        "id" => "question3",
         "question" => "Wie wichtig ist köperliche Aktivität für dich?",
-        "type" => "Slider",
+        "type" => "range",
         "min" => 1,
         "max" => 5,
-        "value" => 3
+        "value" => array(3)
     ),
-    "question04" => array(
+    array(
+        "id" => "question4",
         "question" => "Welche zusätzliche körperliche Aktivität betreibst du am meisten?",
-        "type" => "Slider",
+        "type" => "checkbox",
         "value" => array(
             "Gewichte heben",
             "Gehen",
@@ -37,46 +40,53 @@ $questions = array(
             "Andere"
         )
     ),
-    "question05" => array(
+    array(
+        "id" => "question5",
         "question" => "Hast du das Gefühl, zu wenig, genügend oder viel zu viel zusätzliche körperliche Aktivitäten zu betreiben?",
-        "type" => "Slider",
+        "type" => "range",
         "min" => 1,
         "max" => 5,
-        "value" => 3
+        "value" => array(3)
     ),
-    "question06" => array(
+    array(
+        "id" => "question6",
         "question" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Kohlenhydrate?",
-        "type" => "Number",
+        "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => 3
+        "value" => array(3)
     ),
-    "question07" => array(
+    array(
+        "id" => "question7",
         "question" => " An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Protein?",
-        "type" => "Number",
+        "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => 3
+        "value" => array(3)
     ),
-    "question08" => array(
+    array("id" => "question3",
+        "id" => "question8",
         "question" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Gemüse?",
-        "type" => "Number",
+        "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => 3
+        "value" => array(3)
     ),
-    "question09" => array(
+    array(
+        "id" => "question9",
         "question" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Früchte?",
-        "type" => "Number",
+        "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => 3
+        "value" => array(3)
     ),
-    "question10" => array(
+    array(
+        "id" => "question10",
         "question" => "An einem typischen Tag: Wie viele deiner Malzeiten kommen aus der Mikrowelle oder sind schon fertig zubereitet?",
+        "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => 3
+        "value" => array(3)
     ),
 )
 ?>
