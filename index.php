@@ -1,3 +1,4 @@
+<?php require 'includes/head.php'; ?>
 <main>
     <div class="container main">
       <div class="row">
@@ -73,7 +74,6 @@
 </main>
 
 <?php 
-require 'includes/head.php';
 require "./includes/header.php";
 require 'includes/include_javascript.php';
 require 'includes/footer.php'

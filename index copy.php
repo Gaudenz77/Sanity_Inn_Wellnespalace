@@ -1,10 +1,11 @@
+<?php require 'includes/head.php'; ?>
 <main>
     <div class="container main">
       <div class="row">
       <h1>index copy</h1>
       <form action="./index copy 2.php" method="post">
-      Name: <input type="text" name="name"><br>
-      E-mail: <input type="text" name="email"><br>
+      vorname: <input type="text" name="name"><br>
+      alter: <input type="text" name="number"><br>
       <input type="submit">
       </form>
 
@@ -79,7 +80,7 @@
 </main>
 
 <?php 
-require 'includes/head.php';
+
 require "./includes/header.php";
 require 'includes/include_javascript.php';
 require 'includes/footer.php'
