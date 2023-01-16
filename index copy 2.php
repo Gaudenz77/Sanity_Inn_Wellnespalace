@@ -1,8 +1,8 @@
 <main>
     <div class="container main">
       <div class="row">
-        
-      <form action="welcome.php" method="post">
+      <h1>index copy 2</h1>
+      <form action="./index copy 3.php" method="post">
       Name: <input type="text" name="name"><br>
       E-mail: <input type="text" name="email"><br>
       <input type="submit">
