@@ -141,7 +141,7 @@ slider.oninput = function() {
 output.innerHTML = this.value;
 } */
 
-// CHRIS INPUT ------------------------------------------------------------------------
+//JS-RANGE-SLIDER-VALIDATION ------------------------------------------------------------------------ CHRIS INPUT/
 
 function range() {
   /* debugger; */
@@ -171,8 +171,6 @@ function sliderHasChanged() {
   let hiddenInputElement = document.getElementById("range-slider-changed");
   if (hiddenInputElement.value === "1") return true;
   
-  
-  
   else return false;
 }
 
@@ -182,24 +180,7 @@ function setWarning(text) {
 
 } 
 
-
-
-/* function validateRangeSlider() {
-  // get the range slider element
-  var rangeSlider = document.getElementById("range-slider");
-
-  // check if the slider has been used
-  if (rangeSlider.value === rangeSlider.min) {
-    // display an error message
-    setWarning("Please select a value for the range slider");
-
-    // prevent the form from being submitted
-    return false;
-  }
-
-  // allow the form to be submitted
-  return true;
-} */
+// FUNCTION DELETE ALL COOKIES ---------------------------------------------------------------------------------------------
 
 function deleteAllCookies() {
   const cookies = document.cookie.split(";");
@@ -214,99 +195,40 @@ function deleteAllCookies() {
 
 }
 
-function deleteAllCookies() {
-  const cookies = document.cookie.split(";");
-
-  for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i];
-      const eqPos = cookie.indexOf("=");
-      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-  }
-  window.location.href = "/index.php?seite=index";
-
-}
+// FUNCTION DARK-MODE TOGGLE ---------------------------------------------------------------------------------------------
+// sollHellDunkel = mustBrightDark
+// so oder so ??? ln 247 ???
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Phone Number---------------
-/* function start() {
-
-  var userNumber = prompt("Enter Your Cell Number");
-  
-  var result = userNumber.match(/^(1|)?(\d{3})(\d{3})(\d{4})$/);
-  
-  var cCode = result[1] ? "+41" : "";
-  
-  var formattedNumber =
-  
-  cCode + " (" + result[2] + ") " + result[3] + "-" + result[4];
-  
-  document.getElementById("number").innerHTML =
-  
-  "The international number is: " + formattedNumber;
-  
-  } */
-
-  /* wechsel Hell Dunkel */
-function buttonWechselHellDunkel(){
-  let sollHellDunkel = localStorage.getItem('sollHellDunkel');
-  if(sollHellDunkel === 'Dunkel'){
-      localStorage.setItem('sollHellDunkel' , 'Hell');
+/* Change Bright to Dark */
+function buttonChangeBrightDark(){
+  let mustBrightDark = localStorage.getItem('mustBrightDark');
+  if(mustBrightDark === 'Dark'){
+      localStorage.setItem('mustBrightDark' , 'Bright');
   } else {
-      localStorage.setItem('sollHellDunkel' , 'Dunkel');
+      localStorage.setItem('mustBrightDark' , 'Dark');
   }
 }
-function wechselDunkel(){
-  /* Bilder Hell aus */
-  document.getElementById('logoHell').style.display = 'none';
-  /* Bilder Dunkel ein */
-  document.getElementById('logoDunkel').style.display = 'inline-flex';
+function changeDark(){
+  /* Pictures Bright off */
+  document.getElementById('logoBright').style.display = 'none';
+  /* Pictures Dark ein */
+  document.getElementById('logoDark').style.display = 'inline-flex';
 }
-function wechselHell(){
-  /* Bilder Hell aus */
-  document.getElementById('logoHell').style.display = 'inline-flex';
-  /* Bilder Dunkel ein */
-  document.getElementById('logoDunkel').style.display = 'none';
+function changeBright(){
+  /* Pictures Bright off */
+  document.getElementById('logoBright').style.display = 'inline-flex';
+  /* Pictures Dark on */
+  document.getElementById('logoDark').style.display = 'none';
 }
-function wechselHellDunkel(){
-  /* so oder so */
+function changeBrightDark(){
+  /* so oder so ??? */
   document.body.classList.toggle('bodyDark');
-  /* haeder wechseln */
-  let haeder = document.querySelectorAll('.haederHell');
+  /* header change */
+  let header = document.querySelectorAll('.headerBright');
 
-  for (let h = 0; h < haeder.length; h++) {
-      haeder[h].classList.toggle('headerDark');
+  for (let h = 0; h < header.length; h++) {
+      header[h].classList.toggle('headerDark');
   }
   
   let buttons = document.querySelectorAll('.btn-light');
@@ -314,32 +236,34 @@ function wechselHellDunkel(){
   for (let b = 0; b < buttons.length; b++) {
       buttons[b].classList.toggle('btn-dark');
   }
-  /* spetifischer wechsel */
-  let istHellDunkel = localStorage.getItem('istHellDunkel');
-  if(istHellDunkel === 'Hell'){
-      wechselDunkel();
-      localStorage.setItem('istHellDunkel' , 'Dunkel');
+  /* specific change */
+  let isBrightDark = localStorage.getItem('isBrightDark');
+  if(isBrightDark === 'Bright'){
+      changeDark();
+      localStorage.setItem('isBrightDark' , 'Dark');
   } else {
-      wechselHell();
-      localStorage.setItem('istHellDunkel' , 'Hell');
+      changeBright();
+      localStorage.setItem('isBrightDark' , 'Bright');
   }
 }
-function pruefungHellDunkel(){
-  let istHellDunkel = localStorage.getItem('istHellDunkel');
-  let sollHellDunkel = localStorage.getItem('sollHellDunkel');
-  if(!(istHellDunkel === sollHellDunkel)){
-      wechselHellDunkel();
+function pruefungBrightDark(){
+  let isBrightDark = localStorage.getItem('isBrightDark');
+  let mustBrightDark = localStorage.getItem('mustBrightDark');
+  if(!(isBrightDark === mustBrightDark)){
+      changeBrightDark();
   }
 }
-var intervalWechselHellDunkel;
-function StartWechselHellDunkel(){
-  localStorage.setItem('istHellDunkel' , 'Hell');
-  let sollHellDunkel = localStorage.getItem('sollHellDunkel');
-  if(!(sollHellDunkel === 'Dunkel')){
-      localStorage.setItem('sollHellDunkel' , 'Hell');
+var intervalChangeBrightDark;
+function startChangeBrightDark(){
+  localStorage.setItem('isBrightDark' , 'Bright');
+  let mustBrightDark = localStorage.getItem('mustBrightDark');
+  if(!(mustBrightDark === 'Dark')){
+      localStorage.setItem('mustBrightDark' , 'Bright');
   }
-  intervalWechselHellDunkel = setInterval(function(){pruefungHellDunkel();} , 1);
+  intervalChangeBrightDark = setInterval(function(){pruefungBrightDark();} , 1);
 }
-/* Start Haeder */
+/* start header */
 
-  StartWechselHellDunkel();
+  startChangeBrightDark();
+
+ // END BRIGHT-DARK-TOGGLE ------------------------------------------------------------------------------------------
