@@ -48,7 +48,7 @@
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='index.php'>Zurück</a></button>
-              <button type='button' class='btn btn-warning'><a href='index.php?reset=true'>Neu Start</a></button>
+              <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>
               <button type='submit' class='btn btn-success'>Weiter</button>
               </div>
               </form>
