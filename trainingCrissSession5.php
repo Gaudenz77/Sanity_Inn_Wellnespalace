@@ -32,7 +32,7 @@
         $survey = $questions[$seite]["question"];
 
         echo "<form action='' method='POST' onsubmit= 'return validateQuestion1()';>
-                <div class='col-sm bg-secondary p-5'>
+                  <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
               $type = $questions[$seite]["type"];

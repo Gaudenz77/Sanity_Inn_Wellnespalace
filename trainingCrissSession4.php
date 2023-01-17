@@ -54,19 +54,17 @@
         ?>
 
         <?php echo 
-        '<form action="" method="POST" onsubmit="return validateRange();">
+        '<form action="" method="POST" onsubmit="return validateRange()";>
         <input type="range" name="range-slider" id="range-slider" class="form-range" 
                min="0" max="5" step="0.5" onchange="sliderChanged();">
             
-               <input type="hidden" name="range-slider-changed" id="range-slider-changed">
+               <input type="hidden" name="range-slider" id="range-slider-changed">
                <button type="submit" class="btn btn-success">Submit</button>
               </div>
-               
-               </form>
-        <p id="validation-warning"></p>'
+               </form>'
         ?>
 
-
+<p id="validation-warning">ttt</p>
           
           
             

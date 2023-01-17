@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
     <script src="./js/main.js" defer></script>
-    <script src="./js/confirmation.js"></script>
     <title>SANITY-INN-Wellness-Palace</title>
     <style>
       body {

@@ -1,14 +1,14 @@
 
-    if (!range()) return false;    // question Id by type
+  /*   if (!range()) return false;    // question Id by type
     if (!radio()) return false;          // question Id by type
     if (!checkbox()) return false;       // question Id by type
     if (!number()) return false;         // question Id by type
   
     alert("All inputfields are filled in correctly and its good to go!");
-    return true;
+    return true; */
 
 // JS valRangeslider(question-type slider)
-function range() {
+/* function range() {
   let inputElement = document.getElementById("valMail");
   let value = inputElement.value;
 
@@ -28,9 +28,9 @@ function range() {
     return true;
   }
 
-}
+} */
 // JS valRadio(question-type radio)
-  function radio() { 
+/*   function radio() { 
     let inputElement = document.getElementById('valGender');
     let value = inputElement.value;
 
@@ -47,9 +47,9 @@ function range() {
     return true;
   }
 }
-
+ */
 // JS valCheckbox(question-type Checkbox)
-function checkbox() {
+/* function checkbox() {
   let inputElement = document.getElementById('lName');
   let value = inputElement.value;
 
@@ -67,10 +67,10 @@ function checkbox() {
 
   }
       
-}
+} */
 
 // JS valNumber1(question-type num,ber)
-function number() {
+/* function number() {
 let inputElement = document.getElementById('valAge');
 let value = inputElement.value;
 if (!value) {
@@ -112,17 +112,17 @@ function setMessage3(value) {
 
 function setMessage4(value) {
   document.getElementById("message-4").innerText = value;
-} 
+}  */
 
 /* PHP */
 
-function run() {
+/* function run() {
   document.getElementById("resultGender").innerHTML = document.getElementById("valGender").value;
-}
+} */
 
 //----SURVEY NEW--SURVEY NEW--SURVEY NEW--SURVEY NEW--SURVEY NEW--SURVEY NEW--SURVEY NEW--SURVEY NEW--SURVEY NEW-
 
-slider.oninput = function() {
+/* slider.oninput = function() {
   output.innerHTML = this.value;
 }
 
@@ -139,12 +139,14 @@ var slider = document.getElementById("slider");
 output.innerHTML = slider.value;
 slider.oninput = function() {
 output.innerHTML = this.value;
-}
+} */
 
 // CHRIS INPUT ------------------------------------------------------------------------
 
 function range() {
-/*   debugger; */
+  /* debugger; */
+/* alert('validateRange'); */
+
   // check if slider has changed
   if (!sliderHasChanged()) {
     setWarning("please change slider position");
@@ -155,6 +157,7 @@ function range() {
 }
 
 function sliderChanged() {
+  
   // getInputElementByID "range-slider-changed" and its value to 1
   let hiddenInputElement = document.getElementById("range-slider-changed");
   hiddenInputElement = "1";
@@ -162,18 +165,41 @@ function sliderChanged() {
 }
 
 function sliderHasChanged() {
+  console.log("sliderHasChanged");
   // get hidden inputelement reange-slidedr and return true if it is "1"
   // else return false
   let hiddenInputElement = document.getElementById("range-slider-changed");
   if (hiddenInputElement.value === "1") return true;
+  
+  
+  
   else return false;
 }
 
 function setWarning(text) {
-  let warningElement = document.getElementById("validation-warning");
+  let warningElement = document.getElementById("sliderValue");
   warningElement.innerText = text;
 
 } 
+
+
+
+/* function validateRangeSlider() {
+  // get the range slider element
+  var rangeSlider = document.getElementById("range-slider");
+
+  // check if the slider has been used
+  if (rangeSlider.value === rangeSlider.min) {
+    // display an error message
+    setWarning("Please select a value for the range slider");
+
+    // prevent the form from being submitted
+    return false;
+  }
+
+  // allow the form to be submitted
+  return true;
+} */
 
 
 
@@ -187,7 +213,7 @@ function deleteAllCookies() {
       const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
       document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
   }
-  window.location.href = 'index.php';
+  window.location.href = "/index.php?seite=index";
 
 }
 
