@@ -1,14 +1,10 @@
-<?php 
-require 'includes/head.php'; 
-require 'includes/data-collector.php'; ?>
 <main>
     <div class="container main">
       <div class="row">
-      <h1>index copy</h1>
-      <form action="./index copy 2.php" method="post">
-      vorname: <input type="text" name="name"><br>
-      alter: <input type="text" name="number"><br>
-      <input type='hidden' name='lastPageID' value='question1'>
+        
+      <form action="./traningCrissSession3.php" method="post">
+      Name: <input type="text" name="name"><br>
+      E-mail: <input type="text" name="email"><br>
       <input type="submit">
       </form>
 
@@ -21,6 +17,7 @@ require 'includes/data-collector.php'; ?>
         <?php
         require 'includes/include_styles.php';
         require './includes/pseudo01.php';
+        prettyPrint($_SESSION);
         $seite =  1;
         
         $survey = $questions[$seite]["question"];
@@ -34,7 +31,7 @@ require 'includes/data-collector.php'; ?>
               for($i=0; $i < count($questions[$seite]["value"]);$i++){
 
                 /* if bedingung ob in der session existiert */
-                $value = $questions[$seite]["value"]; 
+                $value = $questions[$seite]["value"][$i]; 
 
                 echo  "<input type=$type name=$id";
                 if ($type !== 'radio' || $type !== 'checkbox' ){
@@ -56,11 +53,6 @@ require 'includes/data-collector.php'; ?>
               <button type='button' class='btn btn-warning'>Neu Start</button>
               <button type='button' class='btn btn-success'>Weiter</button>
               </div>
-              <div class='button-container'>
-                  <button class='btn btn-danger'>Button 1</button>
-                  <button class='btn btn-warning'>Button 2</button>
-                  <button class='btn btn-success'>Button 3</button>
-            </div>
               ";
         ?>
 
@@ -88,9 +80,10 @@ require 'includes/data-collector.php'; ?>
 </main>
 
 <?php 
+require 'includes/head.php';
 require "./includes/header.php";
 require 'includes/include_javascript.php';
-require 'includes/footer.php';
+require 'includes/footer.php'
 ?>
 
 

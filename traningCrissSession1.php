@@ -1,10 +1,14 @@
+<?php 
+require 'includes/head.php'; 
+require 'includes/data-collector.php'; ?>
 <main>
     <div class="container main">
       <div class="row">
-        
-      <form action="welcome.php" method="post">
-      Name: <input type="text" name="name"><br>
-      E-mail: <input type="text" name="email"><br>
+      <h1>index copy</h1>
+      <form action="./traningCrissSession2.php" method="post">
+      vorname: <input type="text" name="name"><br>
+      alter: <input type="text" name="number"><br>
+      <input type='hidden' name='lastPageID' value='question1'>
       <input type="submit">
       </form>
 
@@ -17,7 +21,6 @@
         <?php
         require 'includes/include_styles.php';
         require './includes/pseudo01.php';
-        prettyPrint($_SESSION);
         $seite =  1;
         
         $survey = $questions[$seite]["question"];
@@ -31,7 +34,7 @@
               for($i=0; $i < count($questions[$seite]["value"]);$i++){
 
                 /* if bedingung ob in der session existiert */
-                $value = $questions[$seite]["value"][$i]; 
+                $value = $questions[$seite]["value"]; 
 
                 echo  "<input type=$type name=$id";
                 if ($type !== 'radio' || $type !== 'checkbox' ){
@@ -53,6 +56,11 @@
               <button type='button' class='btn btn-warning'>Neu Start</button>
               <button type='button' class='btn btn-success'>Weiter</button>
               </div>
+              <div class='button-container'>
+                  <button class='btn btn-danger'>Button 1</button>
+                  <button class='btn btn-warning'>Button 2</button>
+                  <button class='btn btn-success'>Button 3</button>
+            </div>
               ";
         ?>
 
@@ -80,10 +88,9 @@
 </main>
 
 <?php 
-require 'includes/head.php';
 require "./includes/header.php";
 require 'includes/include_javascript.php';
-require 'includes/footer.php'
+require 'includes/footer.php';
 ?>
 
 
