@@ -297,3 +297,72 @@ output.innerHTML = this.value;
   "The international number is: " + formattedNumber;
   
   } */
+
+  /* wechsel Hell Dunkel */
+function buttonWechselHellDunkel(){
+  let sollHellDunkel = localStorage.getItem('sollHellDunkel');
+  if(sollHellDunkel === 'Dunkel'){
+      localStorage.setItem('sollHellDunkel' , 'Hell');
+  } else {
+      localStorage.setItem('sollHellDunkel' , 'Dunkel');
+  }
+}
+function wechselDunkel(){
+  /* Bilder Hell aus */
+  document.getElementById('logoHell').style.display = 'none';
+  /* Bilder Dunkel ein */
+  document.getElementById('logoDunkel').style.display = 'inline-flex';
+}
+function wechselHell(){
+  /* Bilder Hell aus */
+  document.getElementById('logoHell').style.display = 'inline-flex';
+  /* Bilder Dunkel ein */
+  document.getElementById('logoDunkel').style.display = 'none';
+}
+function wechselHellDunkel(){
+  /* so oder so */
+  document.body.classList.toggle('bodyDark');
+  /* haeder wechseln */
+  let haeder = document.querySelectorAll('.haederHell');
+
+  for (let h = 0; h < haeder.length; h++) {
+      haeder[h].classList.toggle('headerDark');
+  }
+  
+  let buttons = document.querySelectorAll('.btn-light');
+
+  for (let b = 0; b < buttons.length; b++) {
+      buttons[b].classList.toggle('btn-dark');
+  }
+  /* spetifischer wechsel */
+  let istHellDunkel = localStorage.getItem('istHellDunkel');
+  if(istHellDunkel === 'Hell'){
+      wechselDunkel();
+      localStorage.setItem('istHellDunkel' , 'Dunkel');
+  } else {
+      wechselHell();
+      localStorage.setItem('istHellDunkel' , 'Hell');
+  }
+}
+function pruefungHellDunkel(){
+  let istHellDunkel = localStorage.getItem('istHellDunkel');
+  let sollHellDunkel = localStorage.getItem('sollHellDunkel');
+  if(!(istHellDunkel === sollHellDunkel)){
+      wechselHellDunkel();
+  }
+}
+var intervalWechselHellDunkel;
+function StartWechselHellDunkel(){
+  localStorage.setItem('istHellDunkel' , 'Hell');
+  let sollHellDunkel = localStorage.getItem('sollHellDunkel');
+  if(!(sollHellDunkel === 'Dunkel')){
+      localStorage.setItem('sollHellDunkel' , 'Hell');
+  }
+  intervalWechselHellDunkel = setInterval(function(){pruefungHellDunkel();} , 1);
+}
+/* Start Haeder */
+function StartHaeder(){
+  StartUhr();
+  StartStopuhr();
+  StartWechselHellDunkel();
+}
