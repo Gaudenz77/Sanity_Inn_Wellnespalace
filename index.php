@@ -1,9 +1,11 @@
 <?php 
 require 'includes/phpValidation.php';
-$reset = $_GET['reset'];
-echo $reset;
-if($reset === 'true'){
-  session_destroy(); 
+if (isset($_GET['reset'])) {
+  $reset = $_GET['reset'];
+  echo $reset;
+  if ($reset === 'true') {
+    session_destroy();
+  }
 }
 ?>
 <body>
