@@ -1,21 +1,14 @@
-function validateAll() {
-    if (!valRangeslider()) return false;              // question1
-    if (!valRadio()) return false;                    // question2
-    if (!valRangeslider2()) return false;             // question3
-    if (!valCheckbox()) return false;                 // question4
-    if (!valRangeslider3()) return false;             // question5
-    if (!valNumber1()) return false;         // question6
-    if (!valNumber2()) return false;         // question7
-    if (!valNumber3()) return false;             // question8
-    if (!valNumber4()) return false;              // question9
-    if (!valNumber5()) return false;              // question10
 
-
+    if (!range()) return false;    // question Id by type
+    if (!radio()) return false;          // question Id by type
+    if (!checkbox()) return false;       // question Id by type
+    if (!number()) return false;         // question Id by type
+  
     alert("All inputfields are filled in correctly and its good to go!");
     return true;
-  }
-// JS valRangeslider(question1)
-function valRangeslider() {
+
+// JS valRangeslider(question-type slider)
+function range() {
   let inputElement = document.getElementById("valMail");
   let value = inputElement.value;
 
@@ -36,8 +29,8 @@ function valRangeslider() {
   }
 
 }
-// JS valRadio(question2)
-  function valRadio() { 
+// JS valRadio(question-type radio)
+  function radio() { 
     let inputElement = document.getElementById('valGender');
     let value = inputElement.value;
 
@@ -54,26 +47,9 @@ function valRangeslider() {
     return true;
   }
 }
-// JS valRangeslider2(question3)
-function valRangeslider2() {
-  let inputElement = document.getElementById('fName');
-  let value = inputElement.value;
 
-  
-  if (!value) { // '', null, undefined
-    setMessage3("first name must be filled out");
-    return false;
-  }
-  else {
-    
-    setLocalStorage("fName", value); //  fname
-    // setMessage3(value);
-    return true;
-    
-  }
-}
-// JS valCheckbox(question4)
-function valCheckbox() {
+// JS valCheckbox(question-type Checkbox)
+function checkbox() {
   let inputElement = document.getElementById('lName');
   let value = inputElement.value;
 
@@ -92,33 +68,9 @@ function valCheckbox() {
   }
       
 }
-// JS valRangeslider3(question5)
-function valRangeslider3() {
-  let inputElement = document.getElementById('valAge');
-  let value = inputElement.value;
-  if (!value) {
-    setMessage5("please insert your age");
-    return false;
 
-  } 
-
-  else if( value < 18 || value > 99 ) { 
-    
-    setMessage5('number is either smaller 18 or greater than 99, please use numbers from 0 to 10 only!');
-  
-
-  }
-
-else {
-
-    setLocalStorage("valAge", value); // age
-    // setMessage5(value);
-    return true;
-
-  }
-}
-// JS valNumber1(question6)
-function valNumber1() {
+// JS valNumber1(question-type num,ber)
+function number() {
 let inputElement = document.getElementById('valAge');
 let value = inputElement.value;
 if (!value) {
@@ -143,70 +95,6 @@ else {
 }
 
 }
-// JS valNumber2(question7)
-function valNumber2() { 
-  let inputElement = document.getElementById('classLevel');
-  let value = inputElement.value;
-
-  if (!value) {
-  setMessage7("please chose a level");
-  return false;
-}
-else {
-  setLocalStorage("classLevel", value);
-  //setMessage7(value);
-  return true;
-}
-}
-
-// JS valNumber3(question8)
-function valNumber3() { 
-  let inputElement = document.getElementById('classLevel');
-  let value = inputElement.value;
-
-  if (!value) {
-  setMessage7("please chose a level");
-  return false;
-}
-else {
-  setLocalStorage("classLevel", value);
-  //setMessage7(value);
-  return true;
-}
-}
-// JS valNumber4(question9)
-function valNumber4() { 
-  let inputElement = document.getElementById('classLevel');
-  let value = inputElement.value;
-
-  if (!value) {
-  setMessage7("please chose a level");
-  return false;
-}
-else {
-  setLocalStorage("classLevel", value);
-  //setMessage7(value);
-  return true;
-}
-}
-
-// JS valNumber5(question10)
-function valNumber5() { 
-  let inputElement = document.getElementById('classLevel');
-  let value = inputElement.value;
-
-  if (!value) {
-  setMessage7("please chose a level");
-  return false;
-}
-else {
-  setLocalStorage("classLevel", value);
-  //setMessage7(value);
-  return true;
-}
-}
-
-
 
 
 function setMessage1(value) {
@@ -225,31 +113,6 @@ function setMessage3(value) {
 function setMessage4(value) {
   document.getElementById("message-4").innerText = value;
 } 
-
-function setMessage5(value) {
-  document.getElementById("message-5").innerText = value;
-} 
-
-function setMessage6(value) {
-  document.getElementById("message-6").innerText = value;
-} 
-
-function setMessage7(value) {
-  document.getElementById("message-7").innerText = value;
-} 
-
-function setMessage8(value) {
-  document.getElementById("message-8").innerText = value;
-} 
-
-function setMessage9(value) {
-  document.getElementById("message-9").innerText = value;
-} 
-
-function setMessage10(value) {
-  document.getElementById("message-10").innerText = value;
-} 
-
 
 /* PHP */
 
@@ -280,7 +143,7 @@ output.innerHTML = this.value;
 
 // CHRIS INPUT ------------------------------------------------------------------------
 
-function validateQuestion1() {
+function range() {
 /*   debugger; */
   // check if slider has changed
   if (!sliderHasChanged()) {

@@ -22,7 +22,7 @@ require 'includes/phpValidation.php';
 
         $survey = $questions[$seite]["question"];
 
-        echo "<form action='question2.php' method='POST' onsubmit= 'return validateQuestion1();'>
+        echo "<form action='question2.php' method='POST' onsubmit= 'return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
@@ -48,7 +48,7 @@ require 'includes/phpValidation.php';
               </form>
               ";
         ?>
-
+<p id="validation-warning">ttt</p>
           
           
             
