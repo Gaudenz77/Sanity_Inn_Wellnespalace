@@ -1,6 +1,18 @@
+<body>
 <main>
     <div class="container main">
-      <div class="row">
+      <div class="row"><div class="col">
+      <!-- <form action="" method="POST" onsubmit="return validateRange();">
+        <input type="range" name="range-slider" id="range-slider" class="form-range" 
+               min="0" max="5" step="0.5" onchange="sliderChanged();">
+            
+               <input type="hidden" name="range-slider-changed" id="range-slider-changed">
+               <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+               
+               </form>
+        <p id="validation-warning">tetxt</p> -->
+      </div>
    
 
 
@@ -19,7 +31,7 @@
 
         $survey = $questions[$seite]["question"];
 
-        echo "<form action='' method='POST'
+        echo "<form action='' method='POST' onsubmit= return 'validateQuestion1()';>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
@@ -29,9 +41,9 @@
               $max = $questions[$seite]["max"];
                 /* if bedingung ob in der session existiert */
             $value = $questions[$seite]["value"]; 
-            echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id=$id  class='slider'>
-            <label for='slider'>$value</label><br> <p><br></p>
-            <span id='sliderValue'></span><br>
+            echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
+            <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
+            <span id='sliderValue'>$value</span><br>
             <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
             <button type='button' class='btn btn-danger'>Zurück</button>
             <button type='button' class='btn btn-warning'>Neu Start</button>
@@ -39,6 +51,19 @@
             </div>
             </form>
             ";
+        ?>
+
+        <?php echo 
+        '<form action="" method="POST" onsubmit="return validateRange();">
+        <input type="range" name="range-slider" id="range-slider" class="form-range" 
+               min="0" max="5" step="0.5" onchange="sliderChanged();">
+            
+               <input type="hidden" name="range-slider-changed" id="range-slider-changed">
+               <button type="submit" class="btn btn-success">Submit</button>
+              </div>
+               
+               </form>
+        <p id="validation-warning"></p>'
         ?>
 
 

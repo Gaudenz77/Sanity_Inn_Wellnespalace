@@ -1,6 +1,7 @@
 <?php 
 require 'includes/head.php'; 
 require 'includes/data-collector.php'; ?>
+<body>
 <main>
     <div class="container main">
       <div class="row">
