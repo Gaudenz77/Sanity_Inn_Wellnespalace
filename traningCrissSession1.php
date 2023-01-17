@@ -19,51 +19,6 @@ require 'includes/data-collector.php'; ?>
 
 <!-- Javascript-Validierung -->
 
-        <?php
-        require 'includes/include_styles.php';
-        require './includes/pseudo01.php';
-        $seite =  1;
-        
-        $survey = $questions[$seite]["question"];
-
-        echo "<div class='col-sm bg-secondary p-5'>
-              $survey
-              <p><br></p>";
-              $type = $questions[$seite]["type"];
-              $id = $questions[$seite]["id"];
-
-              for($i=0; $i < count($questions[$seite]["value"]);$i++){
-
-                /* if bedingung ob in der session existiert */
-                $value = $questions[$seite]["value"]; 
-
-                echo  "<input type=$type name=$id";
-                if ($type !== 'radio' || $type !== 'checkbox' ){
-                  $min = $questions[$seite]["min"];
-                  $max = $questions[$seite]["max"];
-
-                  echo "min='$min' max='$max'";
-                }
-                echo "step='1' value='$value' id=$id  class='slider'>
-                       <label for='slider'>$value</label><br>";
-              }
-       
-              
-        echo
-              "<p><br></p>
-              <span id='sliderValue'></span><br>
-              <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
-              <button type='button' class='btn btn-danger'>Zurück</button>
-              <button type='button' class='btn btn-warning'>Neu Start</button>
-              <button type='button' class='btn btn-success'>Weiter</button>
-              </div>
-              <div class='button-container'>
-                  <button class='btn btn-danger'>Button 1</button>
-                  <button class='btn btn-warning'>Button 2</button>
-                  <button class='btn btn-success'>Button 3</button>
-            </div>
-              ";
-        ?>
 
 
           
