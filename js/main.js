@@ -242,7 +242,7 @@ output.innerHTML = this.value;
 
 // CHRIS INPUT ------------------------------------------------------------------------
 
-function validateRange() {
+function validateQuestion1() {
 /*   debugger; */
   // check if slider has changed
   if (!sliderHasChanged()) {
