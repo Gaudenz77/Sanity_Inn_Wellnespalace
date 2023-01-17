@@ -6,7 +6,7 @@ $questions = array(
         "type" => "range",
         "min" => 1,
         "max" => 5,
-        "value" => array(3)
+        "value" => 3
     ),
     array(
         "id" => "question2",
@@ -20,7 +20,7 @@ $questions = array(
         "type" => "range",
         "min" => 1,
         "max" => 5,
-        "value" => array(3)
+        "value" => 3
     ),
     array(
         "id" => "question4",
@@ -46,7 +46,7 @@ $questions = array(
         "type" => "range",
         "min" => 1,
         "max" => 5,
-        "value" => array(3)
+        "value" => 3
     ),
     array(
         "id" => "question6",
@@ -54,7 +54,7 @@ $questions = array(
         "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => array(3)
+        "value" => 3
     ),
     array(
         "id" => "question7",
@@ -62,7 +62,7 @@ $questions = array(
         "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => array(3)
+        "value" => 3
     ),
     array("id" => "question3",
         "id" => "question8",
@@ -70,7 +70,7 @@ $questions = array(
         "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => array(3)
+        "value" => 3
     ),
     array(
         "id" => "question9",
@@ -78,7 +78,7 @@ $questions = array(
         "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => array(3)
+        "value" => 3
     ),
     array(
         "id" => "question10",
@@ -86,7 +86,7 @@ $questions = array(
         "type" => "number",
         "min" => 1,
         "max" => 5,
-        "value" => array(3)
+        "value" => 3
     ),
 )
 ?>

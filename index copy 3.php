@@ -1,3 +1,8 @@
+<?php 
+session_start();
+require 'includes/head.php';
+require 'includes/data-colector.php';
+?>
 <main>
     <div class="container main">
       <div class="row">
@@ -13,6 +18,7 @@
         <?php
         require 'includes/include_styles.php';
         require './includes/pseudo01.php';
+        prettyPrint($_SESSION);
         $seite =  1;
         
         $survey = $questions[$seite]["question"];

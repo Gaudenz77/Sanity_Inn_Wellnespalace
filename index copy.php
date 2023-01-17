@@ -1,10 +1,16 @@
+<?php 
+session_start();
+session_destroy();
+require 'includes/head.php';
+require 'includes/data-colector.php';
+?>
 <main>
     <div class="container main">
       <div class="row">
       <h1>index copy</h1>
       <form action="/index copy 2.php" method="post">
       Name: <input type="text" name="name"><br>
-      E-mail: <input type="text" name="email"><br>
+      <input type="hidden" name="lastPageID" value="question-1"><br>
       <input type="submit">
       </form>
 
@@ -30,7 +36,7 @@
               for($i=0; $i < count($questions[$seite]["value"]);$i++){
 
                 /* if bedingung ob in der session existiert */
-                $value = $questions[$seite]["value"][$i]; 
+                $value = $questions[$seite]["value"]; 
 
                 echo  "<input type=$type name=$id";
                 if ($type !== 'radio' || $type !== 'checkbox' ){
@@ -79,10 +85,9 @@
 </main>
 
 <?php 
-require 'includes/head.php';
 require "./includes/header.php";
 require 'includes/include_javascript.php';
-require 'includes/footer.php'
+require 'includes/footer.php';
 ?>
 
 
