@@ -12,8 +12,8 @@ function validateAll() {
     alert("All inputfields are filled in correctly and its good to go!");
     return true;
   }
-
-function validateMail() {
+// JS valRangeslider (question1)
+function question1() {
   let inputElement = document.getElementById("valMail");
   let value = inputElement.value;
 
@@ -34,8 +34,8 @@ function validateMail() {
   }
 
 }
-
-  function validateGender() { 
+// JS valRadio (question2)
+  function question2() { 
     let inputElement = document.getElementById('valGender');
     let value = inputElement.value;
 
@@ -52,8 +52,8 @@ function validateMail() {
     return true;
   }
 }
-
-function validatefName() {
+// JS valRangeslider (question3)
+function question3() {
   let inputElement = document.getElementById('fName');
   let value = inputElement.value;
 
@@ -70,8 +70,8 @@ function validatefName() {
     
   }
 }
-
-function validatelName() {
+// JS valCheckbox (question4)
+function question4() {
   let inputElement = document.getElementById('lName');
   let value = inputElement.value;
 
@@ -90,8 +90,8 @@ function validatelName() {
   }
       
 }
-
-function validateAge() {
+// JS valRangeslider (question5)
+function question5() {
   let inputElement = document.getElementById('valAge');
   let value = inputElement.value;
   if (!value) {
@@ -115,29 +115,30 @@ else {
 
   }
 }
+// JS valNumber(question6)
+let inputElement = document.getElementById('valAge');
+let value = inputElement.value;
+if (!value) {
+  setMessage5("please insert your age");
+  return false;
 
-function validatePhone() {
-  let inputElement = document.getElementById("telNumber");
-  let value = inputElement.value;
+} 
 
-  if (!value) {
-    setMessage6("Please enter your phone");
-    return false;
-  }
+else if( value < 18 || value > 99 ) { 
+  
+  setMessage5('number is either smaller 18 or greater than 99, please use numbers from 0 to 10 only!');
 
-  /* else if (value.indexOf('@') < 0) {
-    setMessage6("please enter a valid phone number");
-    return false;
-  } */
-
-  else {
-    setLocalStorage("telNumber", value);
-    // setMessage6(value);
-    return true;
-  }
 
 }
 
+else {
+
+  setLocalStorage("valAge", value); // age
+  // setMessage5(value);
+  return true;
+
+}
+// JS valNumber(question7)
 function validateLevel() { 
   let inputElement = document.getElementById('classLevel');
   let value = inputElement.value;
@@ -153,31 +154,54 @@ else {
 }
 }
 
-function validateComment() { 
-  let inputElement = document.getElementById('myComment');
+// JS valNumber(question8)
+function validateLevel() { 
+  let inputElement = document.getElementById('classLevel');
   let value = inputElement.value;
 
-  /* if (!value) {
-  setMessage8("please tell us about your needs..");
+  if (!value) {
+  setMessage7("please chose a level");
   return false;
-} */
-  setLocalStorage("myComment", value);
-  //setMessage8(value);
+}
+else {
+  setLocalStorage("classLevel", value);
+  //setMessage7(value);
   return true;
 }
-
-function validateHidden() { 
-  let inputElement = document.getElementById('myHidden');
+}
+// JS valNumber(question9)
+function validateLevel() { 
+  let inputElement = document.getElementById('classLevel');
   let value = inputElement.value;
 
-  /* if (!value) {
-  setMessage8("please tell us about your needs..");
+  if (!value) {
+  setMessage7("please chose a level");
   return false;
-} */
-  setLocalStorage("myHidden", value);
-  //setMessage8(value);
+}
+else {
+  setLocalStorage("classLevel", value);
+  //setMessage7(value);
   return true;
 }
+}
+
+// JS valNumber(question10)
+function validateLevel() { 
+  let inputElement = document.getElementById('classLevel');
+  let value = inputElement.value;
+
+  if (!value) {
+  setMessage7("please chose a level");
+  return false;
+}
+else {
+  setLocalStorage("classLevel", value);
+  //setMessage7(value);
+  return true;
+}
+}
+
+
 
 
 function setMessage1(value) {
