@@ -18,7 +18,7 @@ require 'includes/phpValidation.php';
         require 'includes/pseudo01.php';
         require 'includes/header.php';
 
-        $pageID =  2;
+        $pageID =  3;
         $pageid = $pageID + 1;
         $a = $pageID + 2;
         $back = 'question' . $pageID;

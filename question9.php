@@ -18,7 +18,7 @@ require 'includes/phpValidation.php';
         require 'includes/pseudo01.php';
         require 'includes/header.php';
 
-        $pageID =  2;
+        $pageID =  8;
         $pageid = $pageID + 1;
         $a = $pageID + 2;
         $back = 'question' . $pageID;
@@ -27,7 +27,7 @@ require 'includes/phpValidation.php';
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
 
-        echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
+        echo "<form action='result.php' method='POST' onsubmit='return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
