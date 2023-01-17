@@ -1,19 +1,21 @@
 function validateAll() {
-    if (!validateMail()) return false; 
-    if (!validateGender()) return false; 
-    if (!validatefName()) return false; 
-    if (!validatelName()) return false; 
-    if (!validateAge()) return false; 
-    if (!validatePhone()) return false; 
-    if (!validateLevel()) return false;
-    if (!validateComment()) return false;
-    if (!validateHidden()) return false;
+    if (!valRangeslider()) return false;              // question1
+    if (!valRadio()) return false;                    // question2
+    if (!valRangeslider2()) return false;             // question3
+    if (!valCheckbox()) return false;                 // question4
+    if (!valRangeslider3()) return false;             // question5
+    if (!valNumber1()) return false;         // question6
+    if (!valNumber2()) return false;         // question7
+    if (!valNumber3()) return false;             // question8
+    if (!valNumber4()) return false;              // question9
+    if (!valNumber5()) return false;              // question10
+
 
     alert("All inputfields are filled in correctly and its good to go!");
     return true;
   }
-// JS valRangeslider (question1)
-function question1() {
+// JS valRangeslider(question1)
+function valRangeslider() {
   let inputElement = document.getElementById("valMail");
   let value = inputElement.value;
 
@@ -34,8 +36,8 @@ function question1() {
   }
 
 }
-// JS valRadio (question2)
-  function question2() { 
+// JS valRadio(question2)
+  function valRadio() { 
     let inputElement = document.getElementById('valGender');
     let value = inputElement.value;
 
@@ -52,8 +54,8 @@ function question1() {
     return true;
   }
 }
-// JS valRangeslider (question3)
-function question3() {
+// JS valRangeslider2(question3)
+function valRangeslider2() {
   let inputElement = document.getElementById('fName');
   let value = inputElement.value;
 
@@ -70,8 +72,8 @@ function question3() {
     
   }
 }
-// JS valCheckbox (question4)
-function question4() {
+// JS valCheckbox(question4)
+function valCheckbox() {
   let inputElement = document.getElementById('lName');
   let value = inputElement.value;
 
@@ -90,8 +92,8 @@ function question4() {
   }
       
 }
-// JS valRangeslider (question5)
-function question5() {
+// JS valRangeslider3(question5)
+function valRangeslider3() {
   let inputElement = document.getElementById('valAge');
   let value = inputElement.value;
   if (!value) {
@@ -115,7 +117,8 @@ else {
 
   }
 }
-// JS valNumber(question6)
+// JS valNumber1(question6)
+function valNumber1() {
 let inputElement = document.getElementById('valAge');
 let value = inputElement.value;
 if (!value) {
@@ -138,8 +141,10 @@ else {
   return true;
 
 }
-// JS valNumber(question7)
-function validateLevel() { 
+
+}
+// JS valNumber2(question7)
+function valNumber2() { 
   let inputElement = document.getElementById('classLevel');
   let value = inputElement.value;
 
@@ -154,8 +159,8 @@ else {
 }
 }
 
-// JS valNumber(question8)
-function validateLevel() { 
+// JS valNumber3(question8)
+function valNumber3() { 
   let inputElement = document.getElementById('classLevel');
   let value = inputElement.value;
 
@@ -169,8 +174,8 @@ else {
   return true;
 }
 }
-// JS valNumber(question9)
-function validateLevel() { 
+// JS valNumber4(question9)
+function valNumber4() { 
   let inputElement = document.getElementById('classLevel');
   let value = inputElement.value;
 
@@ -185,8 +190,8 @@ else {
 }
 }
 
-// JS valNumber(question10)
-function validateLevel() { 
+// JS valNumber5(question10)
+function valNumber5() { 
   let inputElement = document.getElementById('classLevel');
   let value = inputElement.value;
 
