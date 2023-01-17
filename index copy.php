@@ -34,7 +34,7 @@ require 'includes/data-collector.php'; ?>
               for($i=0; $i < count($questions[$seite]["value"]);$i++){
 
                 /* if bedingung ob in der session existiert */
-                $value = $questions[$seite]["value"][$i]; 
+                $value = $questions[$seite]["value"]; 
 
                 echo  "<input type=$type name=$id";
                 if ($type !== 'radio' || $type !== 'checkbox' ){
@@ -88,10 +88,9 @@ require 'includes/data-collector.php'; ?>
 </main>
 
 <?php 
-
 require "./includes/header.php";
 require 'includes/include_javascript.php';
-require 'includes/footer.php'
+require 'includes/footer.php';
 ?>
 
 

@@ -1,17 +1,10 @@
-<?php require "./includes/header.php"; ?> 
-<?php require "./includes/head.php"; ?>
-
-
-<?php require './includes/data-collector.php'; ?>
-<?php session_destroy();?>
 <main>
     <div class="container main">
       <div class="row">
-      <h1>index copy 2</h1>
-      <form action="./index copy 3.php" method="post">
-      vorname: <input type="text" name="name"><br>
-      alter: <input type="text" name="number"><br>
-      <input type='hidden' name='lastPageID' value='question2'>
+        
+      <form action="welcome.php" method="post">
+      Name: <input type="text" name="name"><br>
+      E-mail: <input type="text" name="email"><br>
       <input type="submit">
       </form>
 
@@ -24,6 +17,7 @@
         <?php
         require 'includes/include_styles.php';
         require './includes/pseudo01.php';
+        prettyPrint($_SESSION);
         $seite =  1;
         
         $survey = $questions[$seite]["question"];
@@ -86,7 +80,8 @@
 </main>
 
 <?php 
-
+require 'includes/head.php';
+require "./includes/header.php";
 require 'includes/include_javascript.php';
 require 'includes/footer.php'
 ?>
