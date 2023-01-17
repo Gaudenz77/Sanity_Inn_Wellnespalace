@@ -1,15 +1,10 @@
-<?php 
-session_start();
-require 'includes/head.php';
-require 'includes/data-colector.php';
- ?>
 <main>
     <div class="container main">
       <div class="row">
-      <h1>index copy 2</h1>  
-      <form action="/index copy 3.php" method="post">
-      vorname: <input type="text" name="vorname"><br>
-      <input type="hidden" name="lastPageID" value="question-2">
+        
+      <form action="welcome.php" method="post">
+      Name: <input type="text" name="name"><br>
+      E-mail: <input type="text" name="email"><br>
       <input type="submit">
       </form>
 
@@ -84,7 +79,8 @@ require 'includes/data-colector.php';
     </div>
 </main>
 
-<?php
+<?php 
+require 'includes/head.php';
 require "./includes/header.php";
 require 'includes/include_javascript.php';
 require 'includes/footer.php'
