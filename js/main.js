@@ -238,6 +238,18 @@ function setMessage7(value) {
   document.getElementById("message-7").innerText = value;
 } 
 
+function setMessage8(value) {
+  document.getElementById("message-8").innerText = value;
+} 
+
+function setMessage9(value) {
+  document.getElementById("message-9").innerText = value;
+} 
+
+function setMessage10(value) {
+  document.getElementById("message-10").innerText = value;
+} 
+
 
 /* PHP */
 
@@ -265,9 +277,6 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
 output.innerHTML = this.value;
 }
-
-
-
 
 // CHRIS INPUT ------------------------------------------------------------------------
 
