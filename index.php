@@ -7,8 +7,6 @@ require 'includes/phpValidation.php';
       <div class="row"><div class="col">
       </div>
    
-
-
 <!--  wir holen php den session-value raus, wenn keine Eingabe(empty) if-bedingung =  $value="3" -->  
 
 <!-- Javascript-Validierung -->
