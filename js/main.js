@@ -240,7 +240,39 @@ output.innerHTML = this.value;
 
 
 
+// CHRIS INPUT ------------------------------------------------------------------------
 
+function validateRange() {
+/*   debugger; */
+  // check if slider has changed
+  if (!sliderHasChanged()) {
+    setWarning("please change slider position");
+    // stoppt die Srpung-action
+    return false;
+  }
+  else return true;
+}
+
+function sliderChanged() {
+  // getInputElementByID "range-slider-changed" and its value to 1
+  let hiddenInputElement = document.getElementById("range-slider-changed");
+  hiddenInputElement = "1";
+
+}
+
+function sliderHasChanged() {
+  // get hidden inputelement reange-slidedr and return true if it is "1"
+  // else return false
+  let hiddenInputElement = document.getElementById("range-slider-changed");
+  if (hiddenInputElement.value === "1") return true;
+  else return false;
+}
+
+function setWarning(text) {
+  let warningElement = document.getElementById("validation-warning");
+  warningElement.innerText = text;
+
+} 
 
 
 
