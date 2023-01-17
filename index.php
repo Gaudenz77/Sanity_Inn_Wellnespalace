@@ -20,14 +20,17 @@ require 'includes/phpValidation.php';
 
         $pageID =  0;
         $pageid = $pageID + 1;
+        $a = $pageID + 2;
+        $link = 'question' . $a;
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
+        $type = $questions[$pageID]["type"];
 
-        echo "<form action='question2.php' method='POST' onsubmit= 'return validateQuestion1();'>
+        echo "<form action='$link.php' method='POST' onsubmit= 'return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
-              $type = $questions[$pageID]["type"];
+
               $id = $questions[$pageID]["id"];
               $min = $questions[$pageID]["min"];
               $max = $questions[$pageID]["max"];
