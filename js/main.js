@@ -361,8 +361,5 @@ function StartWechselHellDunkel(){
   intervalWechselHellDunkel = setInterval(function(){pruefungHellDunkel();} , 1);
 }
 /* Start Haeder */
-function StartHaeder(){
-  StartUhr();
-  StartStopuhr();
+
   StartWechselHellDunkel();
-}
