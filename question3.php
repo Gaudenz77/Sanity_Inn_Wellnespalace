@@ -18,12 +18,13 @@ require 'includes/phpValidation.php';
         require 'includes/pseudo01.php';
         require 'includes/header.php';
 
-        $pageID =  0;
+        $pageID =  2;
         $pageid = $pageID + 1;
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
 
-        echo "<form action='question2.php' method='POST' onsubmit= 'return validateQuestion1();'>
+
+        echo "<form action='question4.php' method='POST' onsubmit= 'return validateQuestion1();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
@@ -38,11 +39,11 @@ require 'includes/phpValidation.php';
                 $value = $questions[$pageID]['value']; 
               }
         echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
-              <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
+              <label for='slider'>1 = Nicht Wichtig // 5 = Sehr Wichtig</label><br> <p><br></p>
               <input type='hidden' name='lastPageID' value='$page'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
-              <button type='button' class='btn btn-danger'><a href='index.php'>Zurück</a></button>
+              <button type='button' class='btn btn-danger'><a href='question2.php'>Zurück</a></button>
               <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>
               <button type='submit' class='btn btn-success'>Weiter</button>
               </div>

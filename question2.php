@@ -28,23 +28,25 @@
         require './includes/pseudo01.php';
         require "./includes/header.php";
 
-        $seite =  1;
-
-        $survey = $questions[$seite]["question"];
+        $pageID =  1;
+        $pageid = $pageID + 1;
+        $page = 'question' . $pageid;
+        $survey = $questions[$pageID]["question"];
 
         echo "<form action='question3.php' method='POST' onsubmit= 'return validateQuestion1();'>
               <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
-              $type = $questions[$seite]['type'];
-              $id = $questions[$seite]['id'];
-              $min = $questions[$seite]['min'];
-              $max = $questions[$seite]['max'];
+              $type = $questions[$pageID]['type'];
+              $id = $questions[$pageID]['id'];
+              $min = $questions[$pageID]['min'];
+              $max = $questions[$pageID]['max'];
               /* if bedingung ob in der session existiert */
-              $value = $questions[$seite]['value']; 
+              $value = $questions[$pageID]['value']; 
 
         echo  "<input type='$type' name='$id' min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
               <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
+              <input type='hidden' name='lastPageID' value='$page'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='index.php'>Zurück</a></button>
