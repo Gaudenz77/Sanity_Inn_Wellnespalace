@@ -33,18 +33,20 @@ require 'includes/phpValidation.php';
               <p><br></p>";
 
               $id = $questions[$pageID]["id"];
-              $min = $questions[$pageID]["min"];
-              $max = $questions[$pageID]["max"];
               /* if bedingung ob in der session existiert */
               if(isset($_SESSION['question01']['question1'])){
                 $value = number_format($_SESSION['question01']['question1']); 
               } else {
                 $value = $questions[$pageID]['value']; 
               }
-        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
-              <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
-              <input type='hidden' name='lastPageID' value='$page'>
-              <span id='sliderValue'>$value</span><br>
+              for($i = 0; $i < count($questions[$pageID]['value']); $i++){
+                $value = $questions[$pageID]['value'][$i];
+        echo "<input type='$type' name='$value' step='1' value='$value' id='$id' class='' onchange='sliderChange();'>
+              <label for='slider'>$value</label><br> <p><br></p>";
+              }
+              
+        echo  "<input type='hidden' name='lastPageID' value='$page'>
+              <span id='sliderValue'></span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='$back'>Zurück</a></button>
               <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>

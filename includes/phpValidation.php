@@ -7,6 +7,7 @@ $_SESSION[$lastPageID] = $_POST;
 }
 
 // DEVONLY: Gibt die aktuelle Session in die Seite aus zum checken
+prettyprint($_POST);
 prettyprint($_SESSION);
 prettyprint($_GET);
 ?>

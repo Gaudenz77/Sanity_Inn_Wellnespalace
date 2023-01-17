@@ -41,7 +41,7 @@ require 'includes/phpValidation.php';
               } else {
                 $value = $questions[$pageID]['value']; 
               }
-        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
+        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='' onchange='sliderChange();'>
               <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
               <input type='hidden' name='lastPageID' value='$page'>
               <span id='sliderValue'>$value</span><br>
