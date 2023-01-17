@@ -64,7 +64,7 @@ $questions = array(
         "max" => 5,
         "value" => 3
     ),
-    array("id" => "question3",
+    array(
         "id" => "question8",
         "question" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Gemüse?",
         "type" => "number",
