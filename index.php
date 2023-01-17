@@ -41,7 +41,7 @@
               $max = $questions[$seite]["max"];
                 /* if bedingung ob in der session existiert */
             $value = $questions[$seite]["value"]; 
-            echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='slider' id='$id'  class='slider' onchange='sliderChange();'>
+            echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
             <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
             <span id='sliderValue'>$value</span><br>
             <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
