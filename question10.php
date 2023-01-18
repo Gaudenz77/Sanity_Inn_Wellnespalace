@@ -41,7 +41,7 @@ require 'includes/phpValidation.php';
               <input type='hidden' name='lastPageID' value='question01'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
-              <button type='button' class='btn btn-danger'><a href='question2.php'>Zurück</a></button>
+              <button type='button' class='btn btn-danger'><a href='$back'>Zurück</a></button>
               <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>
               <button type='submit' class='btn btn-success'>Weiter</button>
               </div>
