@@ -22,6 +22,7 @@ require 'includes/session.php';
         $pageid = $pageID + 1;
         $a = $pageID + 2;
         $link = 'question' . $a;
+        $back = 'question' . $pageID . '.php';
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
