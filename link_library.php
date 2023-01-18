@@ -44,24 +44,24 @@ require 'includes/head.php';
 
 
 
-<!-- buttons -->
-
-
-<div class='button-container bg-info'>
-<a href='index.php'><i class='fa-regular fa-circle-left btn' type='button'> BACK</i></a>
-<i i class='fa-solid fa-rotate-right btn' type='button' onclick='deleteAllCookies()'> NEUSTART</i>
-<i class='fa-regular fa-circle-right btn' type='submit'> NEXT</i>
+<!-- buttons version working -->
+<div class='button-container'>
+<button i class='fa-regular fa-circle-left btn text-center' type='button' id='testBtns'><p class='icnbtns'><a href='index.php' style='text-decoration: none;'>BACK</a></p></i>
+<button i class='fa-solid fa-rotate-right btn text-center' type='button' onclick='deleteAllCookies()' id='testBtns'><p class='icnbtns'>NEUSTART</p></i>
+<button type='submit' i class='fa-regular fa-circle-right btn text-center' id='testBtns'><p class='icnbtns'>NEXT</p></i>
 </div>
 
+<!-- buttons version NOT YET working -->
 <div class='row justify-content-evenly bg-secondary icnbtns'>
-    <div class='col-sm-2 text-center'><a href='index.php'><i class='fa-regular fa-circle-left btn' type='button' id='testBtns'><p class='icnbtns'>BACK</p></i></a></div>
-    <div class='col-sm-2 text-center'><i class='fa-solid fa-rotate-right btn' type='button' onclick='deleteAllCookies()' id='testBtns'><p class='icnbtns'>NEUSTART</p></i></div>
-    <div class='col-sm-2 text-center'><i class='fa-regular fa-circle-right btn' type='submit' id='testBtns'><p class='icnbtns'>NEXT</p></i></div>
+    <div class='col-sm-4 text-center'><a href='index.php'><i class='fa-regular fa-circle-left btn' type='button' id='testBtns'><p class='icnbtns'>BACK</p></i></a></div>
+    <div class='col-sm-4 text-center'><i class='fa-solid fa-rotate-right btn' type='button' onclick='deleteAllCookies()' id='testBtns'><p class='icnbtns'>NEUSTART</p></i></div>
+    <div class='col-sm-4 text-center'><i class='fa-regular fa-circle-right btn' type='submit' id='testBtns'><p class='icnbtns'>NEXT</p></i></div>
 </div>
 
 <i class='fa-regular fa-circle-left'></i>
 <i class='fa-solid fa-rotate-right'></i>
 <i class='fa-regular fa-circle-right'></i>
+
 </body>
 </html>
 

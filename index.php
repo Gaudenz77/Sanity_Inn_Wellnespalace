@@ -47,7 +47,7 @@ require 'includes/session.php';
               <input type='hidden' name='type' value='$type' value=''>
               <input type='hidden' name='range-slider' value='' id='range-slider-changed'>
               <span id='sliderValue'>$value</span><br>
-              <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
+              <div class='button-container' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='index.php'>Zurück</a></button>
               <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>
               <button type='submit' class='btn btn-success'>Weiter</button>
