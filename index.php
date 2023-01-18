@@ -36,8 +36,8 @@ require 'includes/session.php';
               $min = $questions[$pageID]["min"];
               $max = $questions[$pageID]["max"];
               /* if bedingung ob in der session existiert */
-              if(isset($_SESSION['question01']['question1'])){
-                $value = number_format($_SESSION['question01']['question1']); 
+              if(isset($_SESSION[$page][$page])){
+                $value = number_format($_SESSION[$page][$page]); 
               } else {
                 $value = $questions[$pageID]['value']; 
               }
