@@ -146,7 +146,7 @@ output.innerHTML = this.value;
 function range() {
   /* debugger; */
 /* alert('validateRange'); */
-
+console.log("range");
   // check if slider has changed
   if (!sliderHasChanged()) {
     setWarning("please change slider position");
@@ -157,10 +157,10 @@ function range() {
 }
 
 function sliderChanged() {
-  
+  console.log("notworking");
   // getInputElementByID "range-slider-changed" and its value to 1
   let hiddenInputElement = document.getElementById("range-slider-changed");
-  hiddenInputElement = "1";
+  hiddenInputElement.value = "1";
 
 }
 
