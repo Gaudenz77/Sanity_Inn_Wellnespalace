@@ -20,14 +20,17 @@ require 'includes/phpValidation.php';
 
         $pageID =  0;
         $pageid = $pageID + 1;
+        $a = $pageID + 2;
+        $link = 'question' . $a;
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
+        $type = $questions[$pageID]["type"];
 
-        echo "<form action='question2.php' method='POST' onsubmit= 'return validateQuestion1();'>
+        echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
-              $type = $questions[$pageID]["type"];
+
               $id = $questions[$pageID]["id"];
               $min = $questions[$pageID]["min"];
               $max = $questions[$pageID]["max"];
@@ -37,9 +40,9 @@ require 'includes/phpValidation.php';
               } else {
                 $value = $questions[$pageID]['value']; 
               }
-        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
+        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChanged();'>
               <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
-              <input type='hidden' name='lastPageID' value='$page'>
+              <input type='hidden' name='lastPageID' value='$page' id='range-slider-changed'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='index.php'>Zurück</a></button>
@@ -49,7 +52,7 @@ require 'includes/phpValidation.php';
               </form>
               ";
         ?>
-
+       
           
           
             

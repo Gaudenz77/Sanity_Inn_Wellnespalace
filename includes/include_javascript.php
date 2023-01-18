@@ -1,9 +1,10 @@
 <script>
-  var slider = document.getElementById("question1");
-  output.innerHTML = slider.value;
-  slider.oninput = function() {
-  output.innerHTML = this.value;
-  }
+  // debugger
+  // var slider = document.getElementById("question1");
+  // output.innerHTML = slider.value;
+  // slider.oninput = function() {
+  // output.innerHTML = this.value;
+  // }
 </script>
 
 
