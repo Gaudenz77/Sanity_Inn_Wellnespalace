@@ -1,5 +1,5 @@
 <?php 
-require 'includes/phpValidation.php';
+require 'includes/session.php';
 ?>
 <body>
 <main>
@@ -25,6 +25,7 @@ require 'includes/phpValidation.php';
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
+        require 'includes/phpValidation.php';
 
         echo "<form action='$link.php' method='POST' onsubmit= 'return $type();'>
                   <div class='col-sm bg-secondary p-5'>
@@ -33,8 +34,8 @@ require 'includes/phpValidation.php';
 
               $id = $questions[$pageID]["id"];
               /* if bedingung ob in der session existiert */
-              if(isset($_SESSION['question01']['question1'])){
-                $value = number_format($_SESSION['question01']['question1']); 
+              if(isset($_SESSION[$page])){
+                $value = number_format($_SESSION[$page][$page]); 
               } else {
                 $value = $questions[$pageID]['value']; 
               }

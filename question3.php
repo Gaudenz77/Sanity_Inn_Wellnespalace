@@ -1,5 +1,5 @@
 <?php 
-require 'includes/phpValidation.php';
+require 'includes/session.php';
 ?>
 <body>
 <main>
@@ -21,10 +21,12 @@ require 'includes/phpValidation.php';
         $pageID =  2;
         $pageid = $pageID + 1;
         $a = $pageID + 2;
+        $back = 'question' . $pageID . '.php';
         $link = 'question' . $a;
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
+        require 'includes/phpValidation.php';
 
 
         echo "<form action='$link.php' method='POST' onsubmit= 'return $type();'>
@@ -36,8 +38,8 @@ require 'includes/phpValidation.php';
               $min = $questions[$pageID]["min"];
               $max = $questions[$pageID]["max"];
               /* if bedingung ob in der session existiert */
-              if(isset($_SESSION['question01']['question1'])){
-                $value = number_format($_SESSION['question01']['question1']); 
+              if(isset($_SESSION[$page])){
+                $value = number_format($_SESSION[$page][$page]); 
               } else {
                 $value = $questions[$pageID]['value']; 
               }
@@ -47,7 +49,7 @@ require 'includes/phpValidation.php';
               <input type='hidden' name='range-slider' value='' id='range-slider-changed'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
-              <button type='button' class='btn btn-danger'><a href='question2.php'>Zurück</a></button>
+              <button type='button' class='btn btn-danger'><a href='$back.php'>Zurück</a></button>
               <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>
               <button type='submit' class='btn btn-success'>Weiter</button>
               </div>
