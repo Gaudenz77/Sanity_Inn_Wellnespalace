@@ -21,13 +21,13 @@ require 'includes/session.php';
         $pageID =  3;
         $pageid = $pageID + 1;
         $a = $pageID + 2;
-        $back = 'question' . $pageID;
+        $back = 'question' . $pageID . '.php';
         $link = 'question' . $a;
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
         require 'includes/phpValidation.php';
-
+        
         echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
@@ -35,14 +35,16 @@ require 'includes/session.php';
 
               $id = $questions[$pageID]["id"];
               /* if bedingung ob in der session existiert */
-              if(isset($_SESSION[$page][$page])){
-                $value = number_format($_SESSION['question01']['question1']); 
-              } else {
-                $value = $questions[$pageID]['value']; 
-              }
+
               for($i = 0; $i < count($questions[$pageID]['value']); $i++){
                 $value = $questions[$pageID]['value'][$i];
-        echo "<input type='$type' name='$value' step='1' value='$value' id='$id' class='' onchange='sliderChange();'>
+            echo "<input type='$type' name='$value' step='1' value='$value' id='$id'";
+                if(isset($_SESSION[$page][$value])){
+                  if ($_SESSION[$page][$value] === $value = $questions[$pageID]['value'][$i]){
+                    echo "checked";
+                  }
+                }
+        echo  " class=''>
               <label for='slider'>$value</label><br> <p><br></p>";
               }
               
