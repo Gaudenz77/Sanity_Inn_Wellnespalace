@@ -42,6 +42,7 @@ require 'includes/phpValidation.php';
               }
         echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChanged();'>
               <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
+              <input type='hidden' name='type' value='$type' id='type'>
               <input type='hidden' name='lastPageID' value='$page' id='range-slider-changed'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>

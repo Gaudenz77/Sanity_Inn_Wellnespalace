@@ -45,7 +45,8 @@ require 'includes/phpValidation.php';
               <label for='slider'>$value</label><br> <p><br></p>";
               }
               
-        echo  "<input type='hidden' name='lastPageID' value='$page'>
+        echo  "<input type='hidden' name='type' value='$type' id='type'>
+              <input type='hidden' name='lastPageID' value='$page'>
               <span id='sliderValue'></span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='$back'>Zurück</a></button>
