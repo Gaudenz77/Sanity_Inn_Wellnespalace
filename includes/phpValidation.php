@@ -1,5 +1,6 @@
 <?php 
 include 'includes/tools.php';
+require 'includes/pseudo01.php';
 prettyprint($_POST);
 
 if (isset($_POST["lastPageID"])) {
