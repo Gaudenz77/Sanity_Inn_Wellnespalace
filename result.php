@@ -29,8 +29,15 @@ require 'includes/session.php';
             echo "<p id='validateAllquestion'>Wir empfehle dieses Abo demit das auch so bleibt.</p>";
         }
 
+        
+
+
+
+
 
         ?>
+
+        
 
           
           
