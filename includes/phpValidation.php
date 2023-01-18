@@ -1,8 +1,9 @@
 <?php 
 include 'includes/tools.php';
 prettyprint($_POST);
-$lastPageID = $_POST["lastPageID"];
+
 if (isset($_POST["lastPageID"])) {
+    $lastPageID = $_POST["lastPageID"];
     switch($_POST['type']){
         case 'range':
             $_SESSION[$lastPageID] = $_POST;
@@ -11,7 +12,7 @@ if (isset($_POST["lastPageID"])) {
         case 'checkbox':
             $_SESSION[$lastPageID] = $_POST;
         case 'number':
-            if((number_format($_POST[$lastPageID]) < $questions[$pageID]['max']) || (number_format($_POST[$lastPageID]) > $questions[$pageID]['min'])){
+            if((number_format($_POST[$lastPageID]) < $questions[$pageid]['max']) || (number_format($_POST[$lastPageID]) > $questions[$pageid]['min'])){
                 $_SESSION[$lastPageID] = $_POST;
             }
     }

@@ -33,15 +33,14 @@ require 'includes/session.php';
               <p><br></p>";
 
               $id = $questions[$pageID]["id"];
-              $min = $questions[$pageID]["min"];
-              $max = $questions[$pageID]["max"];
+
               /* if bedingung ob in der session existiert */
-              if(isset($_SESSION[$page][$page])){
+              if(isset($_SESSION[$page])){
                 $value = number_format($_SESSION[$page][$page]); 
               } else {
                 $value = $questions[$pageID]['value']; 
               }
-        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
+        echo  "<input type=$type name=$id step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
               <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
               <input type='hidden' name='type' value='$type' id='type'>
               <input type='hidden' name='lastPageID' value='$page'>

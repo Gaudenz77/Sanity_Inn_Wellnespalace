@@ -28,7 +28,7 @@ require 'includes/session.php';
         $type = $questions[$pageID]["type"];
         require 'includes/phpValidation.php';
 
-        echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
+        echo "<form action='$link.php' method='POST' onsubmit= 'return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
@@ -37,8 +37,8 @@ require 'includes/session.php';
               $min = $questions[$pageID]["min"];
               $max = $questions[$pageID]["max"];
               /* if bedingung ob in der session existiert */
-              if(isset($_SESSION['question01']['question1'])){
-                $value = number_format($_SESSION['question01']['question1']); 
+              if(isset($_SESSION[$page])){
+                $value = number_format($_SESSION[$page][$page]); 
               } else {
                 $value = $questions[$pageID]['value']; 
               }
@@ -48,7 +48,7 @@ require 'includes/session.php';
               <input type='hidden' name='lastPageID' value='$page'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
-              <button type='button' class='btn btn-danger'><a href='$back'>Zurück</a></button>
+              <button type='button' class='btn btn-danger'><a href='$back.php'>Zurück</a></button>
               <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>
               <button type='submit' class='btn btn-success'>Weiter</button>
               </div>

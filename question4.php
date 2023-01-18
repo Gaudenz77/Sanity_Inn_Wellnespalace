@@ -35,7 +35,7 @@ require 'includes/session.php';
 
               $id = $questions[$pageID]["id"];
               /* if bedingung ob in der session existiert */
-              if(isset($_SESSION['question01']['question1'])){
+              if(isset($_SESSION[$page][$page])){
                 $value = number_format($_SESSION['question01']['question1']); 
               } else {
                 $value = $questions[$pageID]['value']; 
