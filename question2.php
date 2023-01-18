@@ -12,7 +12,7 @@ require 'includes/session.php';
 <!-- Javascript-Validierung -->
 
         <?php
-        
+
         require 'includes/head.php';
         require 'includes/include_styles.php';
         require 'includes/pseudo01.php';
@@ -21,31 +21,36 @@ require 'includes/session.php';
         $pageID =  1;
         $pageid = $pageID + 1;
         $a = $pageID + 2;
+        $back = 'question' . $pageID . '.php';
         $link = 'question' . $a;
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
         require 'includes/phpValidation.php';
 
-        echo "<form action='$link.php' method='POST' onsubmit= 'return $type();'>
+        echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
 
-              $id = $questions[$pageID]["id"];
               /* if bedingung ob in der session existiert */
-              if(isset($_SESSION[$page])){
-                $value = number_format($_SESSION[$page][$page]); 
-              } else {
-                $value = $questions[$pageID]['value']; 
+
+              for($i = 0; $i < count($questions[$pageID]['value']); $i++){
+                $value = $questions[$pageID]['value'][$i];
+            echo "<input type='$type' name='$value' step='1' value='$value' id='$value'";
+                if(isset($_SESSION[$page][$value])){
+                  if ($_SESSION[$page][$value] === $value = $questions[$pageID]['value'][$i]){
+                    echo "checked";
+                  }
+                }
+        echo  " class=''>
+              <label for='slider'>$value</label><br> <p><br></p>";
               }
-        echo  "
-              <input class='form-check-input' type=$type name=$id value='$value' id='$id' class=''>
-              <label class='form-check-label' for='flexRadioDefault1'>Ja</label><br>
-              <input class='form-check-input' type=$type name=$id value='$value' id='$id' class=''>
-              <label class='form-check-label' for='flexRadioDefault1'>Nein</label><br> <p><br></p>
+
+        echo  "<input type='hidden' name='type' value='$type' id='type'>
               <input type='hidden' name='lastPageID' value='$page'>
-              <span id='sliderValue'>$value</span><br>
+              <input type='hidden' name='type' value='$type' value=''>
+              <span id='sliderValue'></span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='index.php'>Zurück</a></button>
               <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>
@@ -54,12 +59,6 @@ require 'includes/session.php';
               </form>
               ";
         ?>
-<!-- <div class='form-check'>
-  <input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'>
-  <label class='form-check-label' for='flexRadioDefault1'>
-    Default radio
-  </label>
-</div> -->
 
           
           
