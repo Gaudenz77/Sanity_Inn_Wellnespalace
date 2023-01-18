@@ -26,7 +26,7 @@ require 'includes/phpValidation.php';
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
 
-        echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
+        echo "<form action='$link.php' method='POST' onsubmit='return range();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";

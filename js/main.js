@@ -246,7 +246,7 @@ function changeBrightDark(){
       localStorage.setItem('isBrightDark' , 'Bright');
   }
 }
-function pruefungBrightDark(){
+function checkBrightDark(){
   let isBrightDark = localStorage.getItem('isBrightDark');
   let mustBrightDark = localStorage.getItem('mustBrightDark');
   if(!(isBrightDark === mustBrightDark)){
@@ -260,7 +260,7 @@ function startChangeBrightDark(){
   if(!(mustBrightDark === 'Dark')){
       localStorage.setItem('mustBrightDark' , 'Bright');
   }
-  intervalChangeBrightDark = setInterval(function(){pruefungBrightDark();} , 1);
+  intervalChangeBrightDark = setInterval(function(){checkBrightDark();} , 1);
 }
 /* start header */
 
