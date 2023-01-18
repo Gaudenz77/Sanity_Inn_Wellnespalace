@@ -1,14 +1,10 @@
-Various Links and img files:
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-    <meta charset='UTF-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Document</title>
-</head>
-<body>
+<?php
 
+require 'includes/head.php';
+        require 'includes/include_styles.php';
+        require 'includes/pseudo01.php';
+        require 'includes/header.php';
+        ?>
 <div class='container'>
     <div class='row'>
         <div class='col-sm'>
@@ -45,7 +41,27 @@ Various Links and img files:
         </div>
     </div>
 </div>
-    
+
+
+
+<!-- buttons -->
+
+
+<div class='button-container bg-info'>
+<a href='index.php'><i class='fa-regular fa-circle-left btn' type='button'> BACK</i></a>
+<i i class='fa-solid fa-rotate-right btn' type='button' onclick='deleteAllCookies()'> NEUSTART</i>
+<i class='fa-regular fa-circle-right btn' type='submit'> NEXT</i>
+</div>
+
+<div class='row justify-content-evenly bg-secondary icnbtns'>
+    <div class='col-sm-2 text-center'><a href='index.php'><i class='fa-regular fa-circle-left btn' type='button' id='testBtns'><p class='icnbtns'>BACK</p></i></a></div>
+    <div class='col-sm-2 text-center'><i class='fa-solid fa-rotate-right btn' type='button' onclick='deleteAllCookies()' id='testBtns'><p class='icnbtns'>NEUSTART</p></i></div>
+    <div class='col-sm-2 text-center'><i class='fa-regular fa-circle-right btn' type='submit' id='testBtns'><p class='icnbtns'>NEXT</p></i></div>
+</div>
+
+<i class='fa-regular fa-circle-left'></i>
+<i class='fa-solid fa-rotate-right'></i>
+<i class='fa-regular fa-circle-right'></i>
 </body>
 </html>
 

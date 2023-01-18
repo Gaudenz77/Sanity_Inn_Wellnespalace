@@ -74,7 +74,7 @@ font-family: 'Oxygen', sans-serif; */
 .icongen {
   font-size: 50px;
 }
-
+/* Font Style Buttons */
 .button-container {
   display: flex;
   justify-content: space-between;
@@ -82,6 +82,15 @@ font-family: 'Oxygen', sans-serif; */
 
 button {
   width: 30%;
+}
+
+#testBtns {
+  color:red;
+  font-size:150%;
+}
+
+.icnbtns {
+  font-family: 'Oxygen', sans-serif;
 }
 
 
