@@ -26,6 +26,7 @@ require 'includes/session.php';
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
+        $id = $questions[$pageID]["id"];
         require 'includes/phpValidation.php';
 
         echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
@@ -37,7 +38,7 @@ require 'includes/session.php';
 
               for($i = 0; $i < count($questions[$pageID]['value']); $i++){
                 $value = $questions[$pageID]['value'][$i];
-            echo "<input type='$type' name='$value' step='1' value='$value' id='$value'";
+            echo "<input type='$type' name='$id' step='1' value='$value' id='$value'";
                 if(isset($_SESSION[$page][$value])){
                   if ($_SESSION[$page][$value] === $value = $questions[$pageID]['value'][$i]){
                     echo "checked";

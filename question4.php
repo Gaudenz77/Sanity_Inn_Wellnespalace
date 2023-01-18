@@ -37,14 +37,14 @@ require 'includes/session.php';
 
               for($i = 0; $i < count($questions[$pageID]['value']); $i++){
                 $value = $questions[$pageID]['value'][$i];
-            echo "<input type='$type' name='$value' step='1' value='$value' id='$value'";
+            echo "<input type='$type' name='checkbox_$value' step='1' value='$value' id='$value'";
                 if(isset($_SESSION[$page][$value])){
                   if ($_SESSION[$page][$value] === $value = $questions[$pageID]['value'][$i]){
                     echo "checked";
                   }
                 }
-        echo  " class=''>
-              <label for='slider'>$value</label><br> <p><br></p>";
+          echo " class='check'>";// !!!achtung ich brauche eine check class zum validieren!!!
+        echo  "<label for='slider'>$value</label><br> <p><br></p>";
               }
 
         echo  "<input type='hidden' name='type' value='$type' id='type'>

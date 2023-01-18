@@ -26,14 +26,15 @@ require 'includes/session.php';
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
+        $id = $questions[$pageID]["id"];
         require 'includes/phpValidation.php';
 
-        echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
+        echo "<form action='$link.php' method='POST' onsubmit='return $type('$id');'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
 
-              $id = $questions[$pageID]["id"];
+
               $min = $questions[$pageID]["min"];
               $max = $questions[$pageID]["max"];
               /* if bedingung ob in der session existiert */
@@ -42,7 +43,7 @@ require 'includes/session.php';
               } else {
                 $value = ''; 
               }
-        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='' onchange='sliderChanged();'>
+        echo  "<input type='$type' name='$id' min='$min' max='$max' step='1' value='$value' id='$id' class='check' onchange='sliderChanged();'>
               <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
               <input type='hidden' name='lastPageID' name='range-slider' value='$page' id='pageID'>
               <input type='hidden' name='type' value='$type' value=''>

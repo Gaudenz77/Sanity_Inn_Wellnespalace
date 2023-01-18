@@ -141,7 +141,7 @@ function range() {
 console.log("range");
   // check if slider has changed
   if (!sliderHasChanged()) {
-    setWarning("please change slider position");
+    setWarning("Bitte die Position wechseln"); // Deutscher Text da deutsche Warnung
     // stoppt die Srpung-action
     return false;
   }
@@ -170,8 +170,35 @@ function setWarning(text) {
   let warningElement = document.getElementById("sliderValue");
   warningElement.innerText = text;
 
-} 
-
+}
+//JS-CHECKBOX-VALIDATION ---------------------------------------------------------------------------------------------------
+function checkbox(){
+  let elemetCheckbox = document.querySelectorAll('.check');
+  for(let i= 0 ; i < elemetCheckbox.length ; i++){
+    if(elemetCheckbox[i].checked)return true;
+  }
+  setWarning('Bitte irgend eine Wahl treffen');
+  return false;
+}
+//JS-RADIOBUTTON-VALIDATION ------------------------------------------------------------------------------------------------
+function radio(){
+  let elemetRadio = document.getElementsByName('question2');
+  for(let i= 0 ; i < elemetRadio.length ; i++){
+    if(elemetRadio[i].checked)return true;
+  }
+  setWarning('Bitte irgend eine Wahl treffen');
+  return false;
+}
+//JS-NUMBER-VALIDATION -----------------------------------------------------------------------------------------------------
+/* ???? wie bei der automatischen erstellung
+function number(element){
+  console.log(element)
+  let elemetNumber = document.querySelectorAll('.check');
+    console.log(element.min);
+    console.log(element.max);
+    console.log(element.value);
+  return false;
+} */
 // FUNCTION DELETE ALL COOKIES ---------------------------------------------------------------------------------------------
 
 function deleteAllCookies() {
