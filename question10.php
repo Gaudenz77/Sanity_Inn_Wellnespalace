@@ -22,7 +22,7 @@ require 'includes/phpValidation.php';
 
         $survey = $questions[$seite]["question"];
 
-        echo "<form action='question4.php' method='POST' onsubmit= 'return validateQuestion1();'>
+        echo "<form action='result.php' method='POST' onsubmit= 'return validateQuestion1();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
