@@ -17,6 +17,19 @@ require 'includes/session.php';
         require 'includes/include_styles.php';
         require 'includes/pseudo01.php';
         require 'includes/header.php';
+        $pageid =  9;
+        require 'includes/phpValidation.php';
+        $prüfung = 'hacker';
+        switch($prüfung){
+          case 'hacker':
+            echo "<p id='validateAllquestion'>Wenn du nicht richtig ausfüllst können wir dich auch nicht richtig beraten!</p>";
+          case 'helthy':
+            echo "<p id='validateAllquestion'>Super du bist kern gesund wir empfehle dieses Abo demit das auch so bleibt.</p>";
+          case 'unhalthi':
+            echo "<p id='validateAllquestion'>Wir empfehle dieses Abo demit das auch so bleibt.</p>";
+        }
+
+
         ?>
 
           
