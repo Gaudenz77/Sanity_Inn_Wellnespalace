@@ -1,5 +1,5 @@
 <?php 
-require 'includes/phpValidation.php';
+require 'includes/session.php';
 ?>
 <body>
 <main>
@@ -25,6 +25,7 @@ require 'includes/phpValidation.php';
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
+        require 'includes/phpValidation.php';
 
         echo "<form action='$link.php' method='POST' onsubmit= 'return $type();'>
                   <div class='col-sm bg-secondary p-5'>

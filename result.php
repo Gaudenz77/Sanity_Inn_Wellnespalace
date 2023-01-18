@@ -1,5 +1,5 @@
 <?php 
-require 'includes/phpValidation.php';
+require 'includes/session.php';
 ?>
 <body>
 <main>
