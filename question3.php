@@ -18,7 +18,7 @@ require 'includes/phpValidation.php';
         require 'includes/pseudo01.php';
         require 'includes/header.php';
 
-        $pageID =  0;
+        $pageID =  2;
         $pageid = $pageID + 1;
         $a = $pageID + 2;
         $link = 'question' . $a;

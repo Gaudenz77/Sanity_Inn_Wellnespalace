@@ -32,8 +32,6 @@ require 'includes/phpValidation.php';
               <p><br></p>";
 
               $id = $questions[$pageID]["id"];
-              $min = $questions[$pageID]["min"];
-              $max = $questions[$pageID]["max"];
               /* if bedingung ob in der session existiert */
               if(isset($_SESSION['question01']['question1'])){
                 $value = number_format($_SESSION['question01']['question1']); 
@@ -42,7 +40,7 @@ require 'includes/phpValidation.php';
               }
         echo  "
               <input class='form-check-input' type=$type name=$id value='$value' id='$id' class=''>
-              <label class='form-check-label' for='flexRadioDefault1'>Ja</label>
+              <label class='form-check-label' for='flexRadioDefault1'>Ja</label><br>
               <input class='form-check-input' type=$type name=$id value='$value' id='$id' class=''>
               <label class='form-check-label' for='flexRadioDefault1'>Nein</label><br> <p><br></p>
               <input type='hidden' name='lastPageID' value='$page'>
