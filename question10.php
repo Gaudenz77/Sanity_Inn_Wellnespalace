@@ -1,5 +1,5 @@
 <?php 
-require 'includes/session.php';
+require 'includes/phpValidation.php';
 ?>
 <body>
 <main>
@@ -18,15 +18,7 @@ require 'includes/session.php';
         require 'includes/pseudo01.php';
         require 'includes/header.php';
 
-        $pageID =  4;
-        $pageid = $pageID + 1;
-        $a = $pageID + 2;
-        $back = 'question' . $pageID . '.php';
-        $link = 'question' . $a;
-        $page = 'question' . $pageid;
-        $survey = $questions[$pageID]["question"];
-        $type = $questions[$pageID]["type"];
-        require 'includes/phpValidation.php';
+        $seite =  2;
 
         $survey = $questions[$seite]["question"];
 

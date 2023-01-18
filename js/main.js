@@ -136,123 +136,126 @@ output.innerHTML = this.value;
 //JS-RANGE-SLIDER-VALIDATION ------------------------------------------------------------------------ CHRIS INPUT/
 
 function range() {
-    /* debugger; */
-    /* alert('validateRange'); */
-    
-    // check if slider has changed
-    if (!sliderHasChanged()) {
+  /* debugger; */
+/* alert('validateRange'); */
+console.log("range");
+  // check if slider has changed
+  if (!sliderHasChanged()) {
     setWarning("please change slider position");
     // stoppt die Srpung-action
     return false;
-    }
-    else return true;
-    }
-    
-    function sliderChanged() {
-    // getInputElementByID "range-slider-changed" and its value to 1
-    let hiddenInputElement = document.getElementById("range-slider-changed");
-    hiddenInputElement = "1";
-    
-    }
-    
-    function sliderHasChanged() {
-    console.log("sliderHasChanged");
-    // get hidden inputelement reange-slidedr and return true if it is "1"
-    // else return false
-    let hiddenInputElement = document.getElementById("range-slider-changed");
-    if (hiddenInputElement.value === "1") return true;
-    else return false;
-    }
-    
-    function setWarning(text) {
-    let warningElement = document.getElementById("sliderValue");
-    warningElement.innerText = text;
-    
-    } 
-    
-    // FUNCTION DELETE ALL COOKIES ---------------------------------------------------------------------------------------------
-    
-    function deleteAllCookies() {
-    const cookies = document.cookie.split(";");
-    
-    for (let i = 0; i < cookies.length; i++) {
-    const cookie = cookies[i];
-    const eqPos = cookie.indexOf("=");
-    const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-    document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    }
-    window.location.href = "/index.php?seite=index";
-    
-    }
-    
-    // FUNCTION DARK-MODE TOGGLE ---------------------------------------------------------------------------------------------
-    // sollHellDunkel = mustBrightDark
-    // so oder so ??? ln 247 ???
-    
-    /* Change Bright to Dark */
-    function buttonChangeBrightDark(){
-    let mustBrightDark = localStorage.getItem('mustBrightDark');
-    if(mustBrightDark === 'Dark'){
-    localStorage.setItem('mustBrightDark' , 'Bright');
-    } else {
-    localStorage.setItem('mustBrightDark' , 'Dark');
-    }
-    }
-    function changeDark(){
-    /* Pictures Bright off */
-    document.getElementById('logoBright').style.display = 'none';
-    /* Pictures Dark ein */
-    document.getElementById('logoDark').style.display = 'inline-flex';
-    }
-    function changeBright(){
-    /* Pictures Bright off */
-    document.getElementById('logoBright').style.display = 'inline-flex';
-    /* Pictures Dark on */
-    document.getElementById('logoDark').style.display = 'none';
-    }
-    function changeBrightDark(){
-    /* so oder so ??? */
-    document.body.classList.toggle('bodyDark');
-    /* header change */
-    let header = document.querySelectorAll('.headerBright');
-    
-    for (let h = 0; h < header.length; h++) {
-    header[h].classList.toggle('headerDark');
-    }
-    let buttons = document.querySelectorAll('.btn-light');
-    
-    for (let b = 0; b < buttons.length; b++) {
-    buttons[b].classList.toggle('btn-dark');
-    }
-    /* specific change */
-    let isBrightDark = localStorage.getItem('isBrightDark');
-    if(isBrightDark === 'Bright'){
-    changeDark();
-    localStorage.setItem('isBrightDark' , 'Dark');
-    } else {
-    changeBright();
-    localStorage.setItem('isBrightDark' , 'Bright');
-    }
-    }
-    function pruefungBrightDark(){
-    let isBrightDark = localStorage.getItem('isBrightDark');
-    let mustBrightDark = localStorage.getItem('mustBrightDark');
-    if(!(isBrightDark === mustBrightDark)){
-    changeBrightDark();
-    }
-    }
-    var intervalChangeBrightDark;
-    function startChangeBrightDark(){
-    localStorage.setItem('isBrightDark' , 'Bright');
-    let mustBrightDark = localStorage.getItem('mustBrightDark');
-    if(!(mustBrightDark === 'Dark')){
-    localStorage.setItem('mustBrightDark' , 'Bright');
-    }
-    intervalChangeBrightDark = setInterval(function(){pruefungBrightDark();} , 1);
-    }
-    /* start header */
-    
-    startChangeBrightDark();
-    
-    // END BRIGHT-DARK-TOGGLE ------------------------------------------------------------------------------------------
-    
+  }
+  else return true;
+}
+
+function sliderChanged() {
+  console.log("notworking");
+  // getInputElementByID "range-slider-changed" and its value to 1
+  let hiddenInputElement = document.getElementById("range-slider-changed");
+  hiddenInputElement.value = "1";
+
+}
+
+function sliderHasChanged() {
+  console.log("sliderHasChanged");
+  // get hidden inputelement reange-slidedr and return true if it is "1"
+  // else return false
+  let hiddenInputElement = document.getElementById("range-slider-changed");
+  if (hiddenInputElement.value === "1") return true;
+  
+  else return false;
+}
+
+function setWarning(text) {
+  let warningElement = document.getElementById("sliderValue");
+  warningElement.innerText = text;
+
+} 
+
+// FUNCTION DELETE ALL COOKIES ---------------------------------------------------------------------------------------------
+
+function deleteAllCookies() {
+  const cookies = document.cookie.split(";");
+
+  for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i];
+      const eqPos = cookie.indexOf("=");
+      const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+  }
+  window.location.href = "/index.php?seite=index";
+
+}
+
+// FUNCTION DARK-MODE TOGGLE ---------------------------------------------------------------------------------------------
+// sollHellDunkel = mustBrightDark
+// so oder so ??? ln 247 ???
+
+
+/* Change Bright to Dark */
+function buttonChangeBrightDark(){
+  let mustBrightDark = localStorage.getItem('mustBrightDark');
+  if(mustBrightDark === 'Dark'){
+      localStorage.setItem('mustBrightDark' , 'Bright');
+  } else {
+      localStorage.setItem('mustBrightDark' , 'Dark');
+  }
+}
+function changeDark(){
+  /* Pictures Bright off */
+  document.getElementById('logoBright').style.display = 'none';
+  /* Pictures Dark ein */
+  document.getElementById('logoDark').style.display = 'inline-flex';
+}
+function changeBright(){
+  /* Pictures Bright off */
+  document.getElementById('logoBright').style.display = 'inline-flex';
+  /* Pictures Dark on */
+  document.getElementById('logoDark').style.display = 'none';
+}
+function changeBrightDark(){
+  /* so oder so ??? */
+  document.body.classList.toggle('bodyDark');
+  /* header change */
+  let header = document.querySelectorAll('.headerBright');
+
+  for (let h = 0; h < header.length; h++) {
+      header[h].classList.toggle('headerDark');
+  }
+  
+  let buttons = document.querySelectorAll('.btn-light');
+
+  for (let b = 0; b < buttons.length; b++) {
+      buttons[b].classList.toggle('btn-dark');
+  }
+  /* specific change */
+  let isBrightDark = localStorage.getItem('isBrightDark');
+  if(isBrightDark === 'Bright'){
+      changeDark();
+      localStorage.setItem('isBrightDark' , 'Dark');
+  } else {
+      changeBright();
+      localStorage.setItem('isBrightDark' , 'Bright');
+  }
+}
+function checkBrightDark(){
+  let isBrightDark = localStorage.getItem('isBrightDark');
+  let mustBrightDark = localStorage.getItem('mustBrightDark');
+  if(!(isBrightDark === mustBrightDark)){
+      changeBrightDark();
+  }
+}
+var intervalChangeBrightDark;
+function startChangeBrightDark(){
+  localStorage.setItem('isBrightDark' , 'Bright');
+  let mustBrightDark = localStorage.getItem('mustBrightDark');
+  if(!(mustBrightDark === 'Dark')){
+      localStorage.setItem('mustBrightDark' , 'Bright');
+  }
+  intervalChangeBrightDark = setInterval(function(){checkBrightDark();} , 1);
+}
+/* start header */
+
+  startChangeBrightDark();
+
+ // END BRIGHT-DARK-TOGGLE ------------------------------------------------------------------------------------------

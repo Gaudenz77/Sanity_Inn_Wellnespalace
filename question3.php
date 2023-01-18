@@ -18,7 +18,7 @@ require 'includes/session.php';
         require 'includes/pseudo01.php';
         require 'includes/header.php';
 
-        $pageID =  2;
+        $pageID =  0;
         $pageid = $pageID + 1;
         $a = $pageID + 2;
         $back = 'question' . $pageID . '.php';
@@ -28,11 +28,12 @@ require 'includes/session.php';
         $type = $questions[$pageID]["type"];
         require 'includes/phpValidation.php';
 
+
         echo "<form action='$link.php' method='POST' onsubmit= 'return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
-
+              $type = $questions[$pageID]["type"];
               $id = $questions[$pageID]["id"];
               $min = $questions[$pageID]["min"];
               $max = $questions[$pageID]["max"];
@@ -42,10 +43,10 @@ require 'includes/session.php';
               } else {
                 $value = $questions[$pageID]['value']; 
               }
-        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
+        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='slider' onchange='sliderChanged();'>
               <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
-              <input type='hidden' name='type' value='$type' id='type'>
-              <input type='hidden' name='lastPageID' value='$page'>
+              <input type='hidden' name='lastPageID' name='range-slider' value='$page' value='' id='pageID'>
+              <input type='hidden' name='range-slider' value='' id='range-slider-changed'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='$back.php'>Zurück</a></button>

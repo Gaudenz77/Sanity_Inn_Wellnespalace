@@ -40,9 +40,11 @@ require 'includes/session.php';
               } else {
                 $value = $questions[$pageID]['value']; 
               }
-        echo  "<input type=$type name=$id step='1' value='$value' id='$id' class='slider' onchange='sliderChange();'>
-              <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
-              <input type='hidden' name='type' value='$type' id='type'>
+        echo  "
+              <input class='form-check-input' type=$type name=$id value='$value' id='$id' class=''>
+              <label class='form-check-label' for='flexRadioDefault1'>Ja</label>
+              <input class='form-check-input' type=$type name=$id value='$value' id='$id' class=''>
+              <label class='form-check-label' for='flexRadioDefault1'>Nein</label><br> <p><br></p>
               <input type='hidden' name='lastPageID' value='$page'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
@@ -53,6 +55,12 @@ require 'includes/session.php';
               </form>
               ";
         ?>
+<!-- <div class='form-check'>
+  <input class='form-check-input' type='radio' name='flexRadioDefault' id='flexRadioDefault1'>
+  <label class='form-check-label' for='flexRadioDefault1'>
+    Default radio
+  </label>
+</div> -->
 
           
           
