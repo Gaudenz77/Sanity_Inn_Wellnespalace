@@ -24,17 +24,27 @@ font-family: 'Oxygen', sans-serif; */
 } 
 
 #headerWrapper {
+  background:url('../assets/img/Sanity_Inn_Day.png');
+  background-size:cover;
+  background-repeat: no-repeat;
   position:fixed;
   width:100%;
   top:0;
-  height: 20%; 
+  height: 30%; 
   z-index: 1;
+  color:white;
+  left: 0;
+  /*
+  font-weight: bold; 
+  font-size: 120%; */
   }
 
 .contenthead {
-  border-radius: 15px;
-  background-color: ;
+  width:100px;
+  border-radius: 5px;
+  background-color:rgba(84, 83, 83, 0.783);
   font-weight: bold;
+  
   
 }
 .content {
@@ -57,10 +67,6 @@ font-family: 'Oxygen', sans-serif; */
   animation: glow 1s ease-in-out infinite alternate;
 }
 
-.formfield-1 {
-  margin-top: 5vh;
-}
-
 #footer1 {
   position:fixed;
   left: 0;
@@ -72,7 +78,9 @@ font-family: 'Oxygen', sans-serif; */
 }
 
 .queryField {
-  padding: 60px;
+  font-family: 'Oxygen', sans-serif;
+/*   font-weight: bold;
+ */  padding: 60px;
 }
 
 /* Font Style Buttons START TEST */

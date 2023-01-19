@@ -4,8 +4,10 @@ require 'includes/session.php';
 <body>
 <main>
     <div class="container main">
-      <div class="row"><div class="col">
+      <div class="row">
+        <div class="col"><div class="col">
       </div>
+      
    
 <!--  wir holen php den session-value raus, wenn keine Eingabe(empty) if-bedingung =  $value="3" -->  
 
@@ -73,6 +75,7 @@ require 'includes/session.php';
 
 
 
+          </div>
 
       </div>
     </div>

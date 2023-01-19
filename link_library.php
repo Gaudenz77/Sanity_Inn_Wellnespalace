@@ -1,6 +1,6 @@
 <?php
 
-require 'includes/head.php';
+        require 'includes/head.php';
         require 'includes/include_styles.php';
         require 'includes/pseudo01.php';
         require 'includes/header.php';
