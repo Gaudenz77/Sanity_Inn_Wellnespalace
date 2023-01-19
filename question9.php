@@ -30,7 +30,7 @@ require ('includes/head.php');
         require 'includes/phpValidation.php';
 
         echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
-                  <div class='col-sm bg-secondary p-5'>
+                  <div class='col-sm p-5'>
               $survey
               <p><br></p>";
 
@@ -48,10 +48,10 @@ require ('includes/head.php');
               <input type='hidden' name='lastPageID' name='range-slider' value='$page' value='' id='pageID'>
               <input type='hidden' name='type' value='$type' value=''>
               <span id='sliderValue'>$value</span><br>
-              <div class='row justify-content-evenly bg-secondary p-5'>
-              <div class='col-sm-4 text-center'><button type='button' class='btn'><i class='fa-regular fa-circle-left icongen'></i><a href='$back'><p class='icnbtns'>Zurück</p></a></button></div>
-              <div class='col-sm-4 text-center'><button type='button' class='btn' onclick='deleteAllCookies()'><i class='fa-solid fa-rotate-right icongen'></i><p class='icnbtns'>Neu Start</p></button></div>
-              <div class='col-sm-4 text-center'><button type='submit' class='btn'><i class='fa-regular fa-circle-right icongen'></i><p class='icnbtns'>Weiter</button></p></div>
+              <div class='row justify-content-evenly p-5'>
+              <div class='col-sm-4 text-center'><button type='button' class='btn btn-light'><i class='fa-regular fa-circle-left icongen'></i><a href='$back'><p class='icnbtns'>Zurück</p></a></button></div>
+              <div class='col-sm-4 text-center'><button type='button' class='btn btn-light' onclick='deleteAllCookies()'><i class='fa-solid fa-rotate-right icongen'></i><p class='icnbtns'>Neu Start</p></button></div>
+              <div class='col-sm-4 text-center'><button type='submit' class='btn btn-light'><i class='fa-regular fa-circle-right icongen'></i><p class='icnbtns'>Weiter</button></p></div>
               </div>
               </form>
               ";

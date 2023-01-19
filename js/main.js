@@ -65,6 +65,7 @@ function number(element){
     console.log(element.value);
   return false;
 } */
+
 // FUNCTION DELETE ALL COOKIES ---------------------------------------------------------------------------------------------
 
 function deleteAllCookies() {
@@ -84,7 +85,6 @@ function deleteAllCookies() {
 // sollHellDunkel = mustBrightDark
 // so oder so ??? ln 247 ???
 
-
 /* Change Bright to Dark */
 function buttonChangeBrightDark(){
   let mustBrightDark = localStorage.getItem('mustBrightDark');
@@ -96,26 +96,20 @@ function buttonChangeBrightDark(){
 }
 function changeDark(){
   /* Pictures Bright off */
-  //document.getElementById('logoBright').style.display = 'none'; beispiel
+  document.getElementById('headerWrapperDay').style.display = 'none'; 
   /* Pictures Dark ein */
-  //document.getElementById('logoDark').style.display = 'inline-flex'; beispiel
+  document.getElementById('headerWrapperNight').style.display = 'inline-flex';
 }
 function changeBright(){
   /* Pictures Bright off */
-  //document.getElementById('logoBright').style.display = 'inline-flex'; beispiel
+  document.getElementById('headerWrapperDay').style.display = 'inline-flex'; 
   /* Pictures Dark on */
-  //document.getElementById('logoDark').style.display = 'none'; beispiel
+  document.getElementById('headerWrapperNight').style.display = 'none'; 
 }
 function changeBrightDark(){
   /* so oder so ??? */
   document.body.classList.toggle('bodyDark');
-  /* header change */
-  let header = document.querySelectorAll('.headerBright');
 
-  for (let h = 0; h < header.length; h++) {
-      header[h].classList.toggle('headerDark');
-  }
-  
   let buttons = document.querySelectorAll('.btn-light');
 
   for (let b = 0; b < buttons.length; b++) {

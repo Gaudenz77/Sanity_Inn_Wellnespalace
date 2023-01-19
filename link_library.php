@@ -80,3 +80,5 @@
 class='btn'><i class='fa fa-home'></i> Home</button>
 
 
+<button type='button' class='btn btn-light' onclick='buttonChangeBrightDark()'>
+                      <i class='fa-solid fa-circle-half-stroke'></i></button></li>

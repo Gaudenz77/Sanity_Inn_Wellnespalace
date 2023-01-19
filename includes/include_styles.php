@@ -1,5 +1,5 @@
 <style>
-                .slider {
+.slider {
   -webkit-appearance: none;
   width: 50%;
   height: 5px;
@@ -9,6 +9,7 @@
   opacity: 0.7;
   -webkit-transition: .2s;
   transition: opacity .2s;
+  background-color:wheat;
 }
 
 .slider:hover {
@@ -21,8 +22,8 @@
   width: 23px;
   height: 22px;
   border: 0;
-    border-radius: 50%;
-  background: url('./assets/img/heart-circle-plus-solid.svg');
+  border-radius: 50%;
+/*   background: url('./assets/img/heart-circle-plus-solid.svg'); */
   cursor: pointer;
 }
 
@@ -30,8 +31,8 @@
   width: 23px;
   height: 22px;
   border: 0;
-    border-radius: 50%;
-    background: url('./assets/img/heart-circle-plus-solid.svg');
+  border-radius: 50%;
+/*   background: url('./assets/img/heart-circle-plus-solid.svg'); */
   cursor: pointer;
 }
 </style>

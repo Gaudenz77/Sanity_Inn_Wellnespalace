@@ -23,6 +23,11 @@
         background-size:cover;
         background-repeat: no-repeat;
       }
+      .bodyDark {
+        background-color:#212529;
+        color:#f8f9fa;;
+      }
+   
     </style>
   </head>
   <script>startChangeBrightDark();</script>

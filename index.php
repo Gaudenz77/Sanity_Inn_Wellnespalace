@@ -2,7 +2,7 @@
 require ('includes/session.php');
 require ('includes/head.php');
 ?>
-<body>
+<body >
   <?php
     require ('includes/header.php');
   ?>
@@ -30,7 +30,9 @@ require ('includes/head.php');
         require ('includes/phpValidation.php');
 
         echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
-              <div class='col-sm bg-secondary queryField'>
+              <div class='col-sm queryField'>
+              <!--<<button type='button' class='btn btn-light' onclick='buttonChangeBrightDark()'>
+                      i class='fa-solid fa-circle-half-stroke'></i></button></li>-->
               $survey
               <p><br></p>";
 
@@ -49,10 +51,10 @@ require ('includes/head.php');
               <input type='hidden' name='type' value='$type' value=''>
               <input type='hidden' name='range-slider' value='' id='range-slider-changed'>
               <span id='sliderValue'>$value</span><br>
-              <div class='row justify-content-evenly bg-secondary p-5'>
-              <div class='col-sm-4 text-center'><button type='button' class='btn'><i class='fa-regular fa-circle-left icongen'></i><a href='index.php'><p class='icnbtns'>Zurück</p></a></button></div>
-              <div class='col-sm-4 text-center'><button type='button' class='btn' onclick='deleteAllCookies()'><i class='fa-solid fa-rotate-right icongen'></i><p class='icnbtns'>Neu Start</p></button></div>
-              <div class='col-sm-4 text-center'><button type='submit' class='btn'><i class='fa-regular fa-circle-right icongen'></i><p class='icnbtns'>Weiter</button></p></div>
+              <div class='row justify-content-evenly p-5'>
+              <div class='col-sm-4 text-center'><button type='button' class='btn btn-light'><i class='fa-regular fa-circle-left icongen'></i><a href='index.php'><p class='icnbtns'>Zurück</p></a></button></div>
+              <div class='col-sm-4 text-center'><button type='button' class='btn btn-light' onclick='deleteAllCookies()'><i class='fa-solid fa-rotate-right icongen'></i><p class='icnbtns'>Neu Start</p></button></div>
+              <div class='col-sm-4 text-center'><button type='submit' class='btn btn-light'><i class='fa-regular fa-circle-right icongen'></i><p class='icnbtns'>Weiter</button></p></div>
               </div>
               </form>
               ";
@@ -65,6 +67,7 @@ require ('includes/head.php');
       </div>
     </div>
 </main>
+
 
 <?php 
 require 'includes/include_javascript.php';
