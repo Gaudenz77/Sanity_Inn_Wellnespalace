@@ -71,6 +71,9 @@ font-family: 'Oxygen', sans-serif; */
   text-align: center;
 }
 
+.queryField {
+  padding: 60px;
+}
 
 /* Font Style Buttons START TEST */
 /* .button-container {
