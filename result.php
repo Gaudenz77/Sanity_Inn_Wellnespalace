@@ -20,9 +20,9 @@ require ('includes/head.php');
         require ('includes/pseudo01.php');
         $pageid =  9;
         /* require 'includes/phpValidation.php'; */
-        echo "<div class='container'>
+        echo "<div class='container'  style='margin-top:-100px'>
         <div class='row <!-- -fluid --> justify-content-center'>
-        <div class='col-sm-5 p-5'>
+        <div class='col-sm-5 mt-2 p-5'>
         <h2 class='text-center'>Das perfekte Abo für Dich:</h2>
 
 
