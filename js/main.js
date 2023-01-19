@@ -190,7 +190,8 @@ function radio(){
   return false;
 }
 //JS-NUMBER-VALIDATION -----------------------------------------------------------------------------------------------------
-/* ???? wie bei der automatischen erstellung
+/* ???? wie bei der automatischen erstellung*/
+/*
 function number(element){
   console.log(element)
   let elemetNumber = document.querySelectorAll('.check');
