@@ -22,7 +22,7 @@ require ('includes/head.php');
         /* require 'includes/phpValidation.php'; */
         echo "<div class='container'>
         <div class='row <!-- -fluid --> justify-content-center'>
-        <div class='col-sm-5 bg-secondary p-5'>
+        <div class='col-sm-5 p-5'>
         <h2 class='text-center'>Das perfekte Abo für Dich:</h2>
 
 
@@ -38,7 +38,7 @@ require ('includes/head.php');
             echo "<div class='one'><p id='validateAllquestion'>Wir empfehlen das Top-Abo, damit das auch so bleibt.</p></div>
             </div>";
         }
-        echo "<div class='col-sm-7 bg-secondary p-2'>
+        echo "<div class='col-sm-7 p-2'>
             <div class='table-responsive'>
                 <table class='table table-dark table-striped'>
                     <thead>

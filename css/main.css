@@ -1,46 +1,60 @@
 body {
 margin-top: 15vh;;
-background:;
+background-color:#ffffffd3;
 width: 100%;
 height: auto;
 background-size:cover;
 background-repeat: no-repeat;
 font-family: 'Lexend Deca', sans-serif;
 font-family: 'Oxygen', sans-serif;
+font-size: 20px;
 }
 
 .main {
-  margin-top: 120px;
+  margin-top: 280px;
+  margin-bottom:100px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lexend+Deca:wght@100;300;400;500;700;900&family=Oxygen:wght@300;400;700&display=swap');
-@font-face {
-  font-family: 'benguiatbold';
-  src: url('../assets/benguiat_bold-webfont.woff2') format('woff2'),
-       url('../assets/benguiat_bold-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.bodyDark {
+  background-color:#ffffffd3;
+}
 
-} 
 
-#headerWrapper {
+/* @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lexend+Deca:wght@100;300;400;500;700;900&family=Oxygen:wght@300;400;700&display=swap'); */
+#headerWrapperDay {
   background:url('../assets/img/Sanity_Inn_Day.png');
+  display:flex;
   background-size:cover;
   background-repeat: no-repeat;
   position:fixed;
   width:100%;
   top:0;
-  height: 25%; 
+  height: 22%; 
   z-index: 1;
-  color:white;
+  color:#f8f9fa;
   left: 0;
-  /*
-  font-weight: bold; 
-  font-size: 120%; */
   }
 
+#headerWrapperNight {
+    background:url('../assets/img//Sanity_Inn_Night.png');
+    display:none;
+    background-size:cover;
+    background-repeat: no-repeat;
+    position:fixed;
+    width:100%;
+    top:0;
+    height: 20%; 
+    z-index: 1;
+    color:#f8f9fa;
+    left: 0;
+    }
+
 .linkhead {
-  margin-top: -30px;
+  width:max-content;
+  margin-top: -40px;
+  background-color:rgba(84, 83, 83, 0.783);
+  border-radius: 5px;
+  color:black;
 }
 
 .contenthead {
@@ -49,8 +63,8 @@ font-family: 'Oxygen', sans-serif;
   background-color:rgba(84, 83, 83, 0.783);
   font-weight: bold;
   
-  
 }
+
 .content {
   opacity: 95%;
   margin-top:435px;
@@ -58,17 +72,8 @@ font-family: 'Oxygen', sans-serif;
   border-radius: 40px;
 }
 
-.messageError {
-  color: rgb(255, 7, 7);
-  text-align:right;
-  animation: glow 1s ease-in-out infinite alternate;
-}
-
-.error {
-  color: rgb(255, 7, 7);
-  text-align:right;
-  font-family: 'benguiatbold';
-  animation: glow 1s ease-in-out infinite alternate;
+.checkbox {
+/*   padding:10%; */
 }
 
 #footer1 {
@@ -77,7 +82,7 @@ font-family: 'Oxygen', sans-serif;
   bottom:0;
   width: 100%;
   background-color:#ffffff;
-  color: rgb(60, 127, 235);
+  
   text-align: center;
 }
 
@@ -85,6 +90,25 @@ font-family: 'Oxygen', sans-serif;
   font-family: 'Oxygen', sans-serif;
 /*   font-weight: bold;
  */  padding: 60px;
+}
+
+
+/* Button-Text(Font)-Class */
+.icnbtns {
+  font-family: 'Oxygen', sans-serif;
+  font-size: 20px;
+  text-decoration: none !important;
+}
+
+/* Fontawesome Icon Size-Class */
+.icongen {
+  font-size: 30px;
+
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Font Style Buttons START TEST */
@@ -112,21 +136,8 @@ font-family: 'Oxygen', sans-serif;
 
 /* Font Style Buttons START END */
 
-/* Button-Text(Font)-Class */
-.icnbtns {
-  font-family: 'Oxygen', sans-serif;
-  color:red;
-  text-decoration: none;
-}
 
-/* Fontawesome Icon Size-Class */
-.icongen {
-  font-size: 30px;
-}
 
-a:link {
-  text-decoration: none;
-}
 
 
 
