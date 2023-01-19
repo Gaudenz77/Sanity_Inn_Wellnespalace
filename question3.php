@@ -43,7 +43,7 @@ require ('includes/head.php');
               } else {
                 $value = $questions[$pageID]['value']; 
               }
-        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='question1' class='slider' onchange='sliderChanged();'>
+        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='question' class='slider' onchange='sliderChanged();'>
               <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
               <input type='hidden' name='lastPageID' name='range-slider' value='$page' value='' id='pageID'>
               <input type='hidden' name='type' value='$type' value=''>
