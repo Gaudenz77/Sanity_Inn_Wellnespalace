@@ -1,5 +1,5 @@
 body {
-margin-top: 15vh;;
+margin-top: 15vh;
 background-color:#ffffffd3;
 width: 100%;
 height: auto;
@@ -16,7 +16,7 @@ font-size: 20px;
 }
 
 .bodyDark {
-  background-color:#ffffffd3;
+  background-color:#f8f9fa;
 }
 
 
@@ -43,7 +43,7 @@ font-size: 20px;
     position:fixed;
     width:100%;
     top:0;
-    height: 20%; 
+    height: 22%; 
     z-index: 1;
     color:#f8f9fa;
     left: 0;

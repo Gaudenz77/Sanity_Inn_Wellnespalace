@@ -23,10 +23,10 @@ require ('includes/head.php');
             
 
         /* require 'includes/phpValidation.php'; */
-        echo "<div class='container'>
-              <div class='row <!-- -fluid --> justify-content-center'>
-              <div class='col-sm-5 bg-secondary p-5'>
-              <h2 class='text-center'>Das perfekte Abo für Dich:</h2>
+        echo "<div class='container'  style='margin-top:-100px'>
+        <div class='row <!-- -fluid --> justify-content-center'>
+        <div class='col-sm-5 mt-2 p-5'>
+        <h2 class='text-center'>Das perfekte Abo für Dich:</h2>
 
 
               <img src='assets/img/sanity_inn_header_pic_day.jpg' class='img-fluid rounded-circle p-2' alt='...'>";
