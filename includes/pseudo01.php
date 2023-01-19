@@ -12,7 +12,7 @@ $questions = array(
         "id" => "question2",
         "question" => " Nimmst du Nahrungsergänzungsmittel?",
         "type" => "radio",
-        "value" => array("ja","nein")
+        "value" => array(" Ja"," Nein")
     ),
     array(
         "id" => "question3",
@@ -27,17 +27,17 @@ $questions = array(
         "question" => "Welche zusätzliche körperliche Aktivität betreibst du am meisten?",
         "type" => "checkbox",
         "value" => array(
-            "Gewichte heben",
-            "Gehen",
-            "Wandern",
-            "Joggen",
-            "Rennen",
-            "Schwimmen",
-            "Tanzen",
-            "Aerobics",
-            "Pilates",
-            "Team Sport",
-            "Andere"
+            "&nbspGewichte heben",
+            "&nbspGehen",
+            "&nbspWandern",
+            "&nbspJoggen",
+            "&nbspRennen",
+            "&nbspSchwimmen",
+            "&nbspTanzen",
+            "&nbspAerobics",
+            "&nbspPilates",
+            "&nbspTeam Sport",
+            "&nbspAndere"
         )
     ),
     array(

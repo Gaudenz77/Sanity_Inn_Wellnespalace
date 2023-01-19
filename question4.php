@@ -44,39 +44,24 @@ require ('includes/head.php');
                     echo "checked";
                   }
                 }
-          echo " class='check'>";// !!!achtung ich brauche eine check class zum validieren!!!
-        echo  "<label for='slider'>$value</label><br> <p><br></p>";
+          echo " class='check checkbox'>";// !!!achtung ich brauche eine check class zum validieren!!!
+        echo  "<label for='slider'>$value</label><br>";
               }
 
         echo  "<input type='hidden' name='type' value='$type' id='type'>
               <input type='hidden' name='lastPageID' value='$page'>
               <span id='sliderValue'></span><br>
-              <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
-              <button type='button' class='btn btn-danger'><a href='$back'>Zurück</a></button>
-              <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>
-              <button type='submit' class='btn btn-success'>Weiter</button>
+              <div class='row justify-content-evenly bg-secondary p-5'>
+              <div class='col-sm-4 text-center'><button type='button' class='btn'><i class='fa-regular fa-circle-left icongen'></i><a href='$back'><p class='icnbtns'>Zurück</p></a></button></div>
+              <div class='col-sm-4 text-center'><button type='button' class='btn' onclick='deleteAllCookies()'><i class='fa-solid fa-rotate-right icongen'></i><p class='icnbtns'>Neu Start</p></button></div>
+              <div class='col-sm-4 text-center'><button type='submit' class='btn'><i class='fa-regular fa-circle-right icongen'></i><p class='icnbtns'>Weiter</button></p></div>
               </div>
               </form>
               ";
         ?>
 
-          
-          
-            
-            
-             
-              
-              
-              
-
 <!-- Press "next/weiter"-Button: name => $value to PHP-Session  -->
 <!-- Back link einfügen // Reset-Button um Clear-Session einzuleiten und restart homepage -->              
-
-     
-
-
-
-
 
       </div>
     </div>
@@ -86,9 +71,6 @@ require ('includes/head.php');
 require 'includes/include_javascript.php';
 require 'includes/footer.php';
 ?>
-
-
-
 
 </body>
 </html>
