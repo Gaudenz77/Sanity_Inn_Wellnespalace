@@ -29,7 +29,7 @@ require ('includes/head.php');
         $type = $questions[$pageID]["type"];
         require 'includes/phpValidation.php';
 
-        echo "<form action='reasult.php' method='POST' onsubmit='return $type();'>
+        echo "<form action='result.php' method='POST' onsubmit='return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
