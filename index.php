@@ -1,7 +1,11 @@
 <?php 
-require 'includes/session.php';
+require ('includes/session.php');
+require ('includes/head.php');
 ?>
 <body>
+  <?php
+    require ('includes/header.php');
+  ?>
 <main>
     <div class="container main">
       <div class="row"><div class="col">
@@ -12,11 +16,9 @@ require 'includes/session.php';
 <!-- Javascript-Validierung -->
 
         <?php
+        require ('includes/include_styles.php');
+        require ('includes/pseudo01.php');
         
-        require 'includes/head.php';
-        require 'includes/include_styles.php';
-        require 'includes/pseudo01.php';
-        require 'includes/header.php';
 
         $pageID =  0;
         $pageid = $pageID + 1;
@@ -25,7 +27,7 @@ require 'includes/session.php';
         $page = 'question' . $pageid;
         $survey = $questions[$pageID]["question"];
         $type = $questions[$pageID]["type"];
-        require 'includes/phpValidation.php';
+        require ('includes/phpValidation.php');
 
         echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
                   <div class='col-sm bg-secondary p-5'>

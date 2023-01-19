@@ -16,10 +16,7 @@ if (isset($_POST["lastPageID"])) {
             $_SESSION[$lastPageID] = $_POST;
             break;
         case 'number':
-            echo "$_POST[$lastPageID]<br>";
-            echo "$questions[$pageid]['max']<br>";
-            echo "$questions[$pageid]['min']<br>";
-            if((number_format($_POST[$lastPageID]) < $questions[$pageid]['max']) || (number_format($_POST[$lastPageID]) > $questions[$pageid]['min'])){
+            if((number_format($_POST[$lastPageID]) < $questions[$pageID]['max']) || (number_format($_POST[$lastPageID]) > $questions[$pageID]['min'])){
                 $_SESSION[$lastPageID] = $_POST;
             }
             break;

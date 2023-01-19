@@ -1,7 +1,11 @@
 <?php 
-require 'includes/session.php';
+require ('includes/session.php');
+require ('includes/head.php');
 ?>
 <body>
+  <?php
+    require ('includes/header.php');
+  ?>
 <main>
     <div class="container main">
       <div class="row"><div class="col">
@@ -12,11 +16,8 @@ require 'includes/session.php';
 <!-- Javascript-Validierung -->
 
         <?php
-        
-        require 'includes/head.php';
-        require 'includes/include_styles.php';
-        require 'includes/pseudo01.php';
-        require 'includes/header.php';
+        require ('includes/include_styles.php');
+        require ('includes/pseudo01.php');
 
         $pageID =  9;
         $pageid = $pageID + 1;
@@ -28,7 +29,7 @@ require 'includes/session.php';
         $type = $questions[$pageID]["type"];
         require 'includes/phpValidation.php';
 
-        echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
+        echo "<form action='result.php' method='POST' onsubmit='return $type();'>
                   <div class='col-sm bg-secondary p-5'>
               $survey
               <p><br></p>";
@@ -40,13 +41,12 @@ require 'includes/session.php';
               if(isset($_SESSION[$page][$page])){
                 $value = number_format($_SESSION[$page][$page]); 
               } else {
-                $value = $questions[$pageID]['value']; 
+                $value = ''; 
               }
-        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='' onchange='sliderChanged();'>
+        echo  "<input type=$type name=$id min='$min' max='$max' step='1' value='$value' id='$id' class='check' onchange='sliderChanged();'>
               <label for='slider'>1 = Ungesund // 5 = gesund</label><br> <p><br></p>
               <input type='hidden' name='lastPageID' name='range-slider' value='$page' value='' id='pageID'>
               <input type='hidden' name='type' value='$type' value=''>
-              <input type='hidden' name='range-slider' value='' id='range-slider-changed'>
               <span id='sliderValue'>$value</span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='$back'>Zurück</a></button>
