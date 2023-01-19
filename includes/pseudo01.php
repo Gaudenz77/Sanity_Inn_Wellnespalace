@@ -53,28 +53,28 @@ $questions = array(
         "question" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Kohlenhydrate?",
         "type" => "number",
         "min" => 1,
-        "max" => 5
+        "max" => 99
     ),
     array(
         "id" => "question7",
         "question" => " An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Protein?",
         "type" => "number",
         "min" => 1,
-        "max" => 5
+        "max" => 99
     ),
     array(
         "id" => "question8",
         "question" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Gemüse?",
         "type" => "number",
         "min" => 1,
-        "max" => 5
+        "max" => 99
     ),
     array(
         "id" => "question9",
         "question" => "An einem typischen Tag: Wie viele deiner Malzeiten oder Snacks enthalten Früchte?",
         "type" => "number",
         "min" => 1,
-        "max" => 5
+        "max" => 99
 
     ),
     array(
@@ -82,7 +82,7 @@ $questions = array(
         "question" => "An einem typischen Tag: Wie viele deiner Malzeiten kommen aus der Mikrowelle oder sind schon fertig zubereitet?",
         "type" => "number",
         "min" => 1,
-        "max" => 5
+        "max" => 99
     ),
 )
 ?>

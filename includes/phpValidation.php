@@ -1,7 +1,6 @@
 <?php 
 include 'includes/tools.php';
 require 'includes/pseudo01.php';
-/* prettyprint($_POST); */
 
 if (isset($_POST["lastPageID"])) {
     $lastPageID = $_POST["lastPageID"];
@@ -26,6 +25,4 @@ if (isset($_POST["lastPageID"])) {
 
 // DEVONLY: Gibt die aktuelle Session in die Seite aus zum checken
 
-/* prettyprint($_SESSION);
-prettyprint($_GET); */
 ?>
