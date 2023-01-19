@@ -18,26 +18,36 @@ require ('includes/head.php');
         <?php
         require ('includes/include_styles.php');
         require ('includes/pseudo01.php');
+        require ('includes/phpEndValidation.php');
         $pageid =  9;
+            
+
         /* require 'includes/phpValidation.php'; */
-        echo "<div class='container'  style='margin-top:-100px'>
-        <div class='row <!-- -fluid --> justify-content-center'>
-        <div class='col-sm-5 mt-2 p-5'>
-        <h2 class='text-center'>Das perfekte Abo für Dich:</h2>
+        echo "<div class='container' style='margin-top:-100px'>
+              <div class='row <!-- -fluid --> justify-content-center'>
+              <div class='col-sm-5 p-5'>
+              <h2 class='text-center'>Das perfekte Abo für Dich:</h2>
 
 
-        <img src='assets/img/sanity_inn_header_pic_day.jpg' class='img-fluid rounded-circle p-2' alt='...'>";
-
-        $prüfung = 'hacker';
-        switch($prüfung){
-          case 'hacker':
-            echo "<div class='one'><p id='validateAllquestion'>Wenn Du nicht richtig ausfüllst, können wir Dich auch nicht richtig beraten!</p></div>";
-          case 'helthy':
-            echo "<div class='one'><p id='validateAllquestion'>Super, Du bist kern gesund! Wir empfehlen das Top-Abo, damit das auch so bleibt.</p></div>";
-          case 'unhalthi':
-            echo "<div class='one'><p id='validateAllquestion'>Wir empfehlen das Top-Abo, damit das auch so bleibt.</p></div>
-            </div>";
-        }
+              <img src='assets/img/sanity_inn_header_pic_day.jpg' class='img-fluid rounded-circle p-2' alt='...'>";
+              $msg = endValidation();
+              switch($msg){
+                case 'hacker':
+                    echo "<div class='one'><p id='validateAllquestion'>Wenn Du nicht richtig ausfüllst, können wir Dich auch nicht richtig beraten!</p></div>";
+                    break;
+                case 'helthy':
+                    echo "<div class='one'><p id='validateAllquestion'>Super, Du bist kern gesund! Wir empfehlen das Top-Abo, damit das auch so bleibt.</p></div>";
+                    break;
+                case 'eat':
+                    echo "<div class='one'><p id='validateAllquestion'>Wir empfehlen das Abo, mit einem Ernährungscoach.</p></div></div>";
+                    break;
+                case 'sport':
+                        echo "<div class='one'><p id='validateAllquestion'>Wir empfehlen das Abo, mit einem Fittnesschoach.</p></div></div>";
+                        break;
+                case 'unhalthy':
+                    echo "<div class='one'><p id='validateAllquestion'>Wir empfehlen das Top-Abo, damit du gesunder wirst.</p></div></div>";
+                    break;
+              }
         echo "<div class='col-sm-7 p-2'>
             <div class='table-responsive'>
                 <table class='table table-dark table-striped'>
@@ -50,49 +60,49 @@ require ('includes/head.php');
                     <tbody>
                         <tr class=''>
                             <td scope='row'>Frage No. 1</td>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo, aliquid voluptates eum est amet hic rem esse numquam laborum consequatur vel mollitia dolorem possimus ab impedit aperiam quas et sequi.
-                            </td>
+                            <td>".$_SESSION['körperlich']."</td>
                         </tr>
                         <tr class=''>
                             <td scope='row'>Frage No. 2</td>
-                            <td>Antwort No. 2</td>
+                            <td>Kommt auf die Umstände an!</td>
                         </tr>
                         <tr class=''>
                             <td scope='row'>Frage No. 3</td>
-                            <td>Antwort No. 3</td>
+                            <td>".$_SESSION['wichtig']."</td>
                         </tr>
                         <tr class=''>
                             <td scope='row'>Frage No. 4</td>
-                            <td>Antwort No. 4</td>
+                            <td>".$_SESSION['zusätzliche']."</td>
                         </tr>
                         <tr class=''>
                             <td scope='row'>Frage No. 5</td>
-                            <td>Antwort No. 5</td>
+                            <td>".$_SESSION['körperlicheAktivitäten']."</td>
                         </tr>
                         <tr class=''>
                             <td scope='row'>Frage No. 6</td>
-                            <td>Antwort No. 6</td>
+                            <td>".$_SESSION['Kohlenhydrate']."</td>
                         </tr>
                         <tr class=''>
                             <td scope='row'>Frage No. 7</td>
-                            <td>Antwort No. 7</td>
+                            <td>".$_SESSION['Protein']."</td>
                         </tr>
                         <tr class=''>
                             <td scope='row'>Frage No. 8</td>
-                            <td>Antwort No. 8</td>
+                            <td>".$_SESSION['Gemüse']."</td>
                         </tr>
+                         = 'Antwort No. 8';
                         <tr class=''>
                             <td scope='row'>Frage No. 9</td>
-                            <td>Antwort No. 9</td>
+                            <td>".$_SESSION['Früchte']."</td>
                         </tr>
                         <tr class=''>
                             <td scope='row'>Frage No. 10</td>
-                            <td>Antwort No. 10</td>
+                            <td>".$_SESSION['Mikrowelle']."</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            
+            <br><br><br><br><br><br><br><br>
             </div>
         </div>
     </div>";
