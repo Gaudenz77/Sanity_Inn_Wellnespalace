@@ -47,11 +47,11 @@ require 'includes/session.php';
               <input type='hidden' name='type' value='$type' value=''>
               <input type='hidden' name='range-slider' value='' id='range-slider-changed'>
               <span id='sliderValue'>$value</span><br>
-              <div class='button-container' role='group' aria-label='Basic mixed styles example'>
-              <button type='button' class='btn btn-danger'><a href='index.php'>Zurück</a></button>
-              <button type='button' class='btn btn-warning' onclick='deleteAllCookies()'>Neu Start</button>
-              <button type='submit' class='btn btn-success'>Weiter</button>
-              </div>
+              <div class='row justify-content-evenly bg-secondary'>
+    <div class='col-sm-4 text-center'><button type='button' class='btn'><i class='fa-regular fa-circle-left icongen'></i><a href='index.php'><p class='icnbtns'>Zurück</p></a></button></div>
+    <div class='col-sm-4 text-center'><button type='button' class='btn' onclick='deleteAllCookies()'><i class='fa-solid fa-rotate-right icongen'></i> <p class='icnbtns'>Neu Start</p></button></div>
+    <div class='col-sm-4 text-center'><button type='submit' class='btn'><i class='fa-regular fa-circle-right icongen'></i><p class='icnbtns'>Weiter</button></p></div>
+</div>
               </form>
               ";
         ?>

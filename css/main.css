@@ -71,27 +71,49 @@ font-family: 'Oxygen', sans-serif; */
   text-align: center;
 }
 
-.icongen {
-  font-size: 50px;
-}
-/* Font Style Buttons */
-.button-container {
+
+/* Font Style Buttons START TEST */
+/* .button-container {
   display: flex;
   justify-content: space-between;
-}
+} */
 
-button {
+/* button {
   width: 30%;
 }
+ */
+/* #button1 {
+  background: url(
+'../../Sanity_Inn_Wellnespalace/assets/circle-arrow-left-solid.svg');
+  
 
-#testBtns {
+  font-size: 2rem;
+} */
+
+/* #testBtns {
   color:red;
   font-size:150%;
-}
+} */
 
+/* Font Style Buttons START END */
+
+/* Button-Text(Font)-Class */
 .icnbtns {
   font-family: 'Oxygen', sans-serif;
+  color:red;
+  text-decoration: none;
 }
+
+/* Fontawesome Icon Size-Class */
+.icongen {
+  font-size: 30px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+
 
 
 
