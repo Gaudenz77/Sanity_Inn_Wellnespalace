@@ -8,8 +8,8 @@ require ('includes/head.php');
   ?>
 <main>
     <div class="container main">
-      <div class="row"><div class="col">
-      </div>
+      <div class="row">
+      <div class="col"  style="margin-top:100px;">
    
 <!--  wir holen php den session-value raus, wenn keine Eingabe(empty) if-bedingung =  $value="3" -->  
 

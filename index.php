@@ -9,8 +9,9 @@ require ('includes/head.php');
 <main>
     <div class="container main">
       <div class="row">
-        <div class="col"><div class="col">
-      </div>
+        <div class="col"  style="margin-top:100px;">
+        
+      
       
 <!--  wir holen php den session-value raus, wenn keine Eingabe(empty) if-bedingung =  $value="3" -->  
 
@@ -29,7 +30,8 @@ require ('includes/head.php');
         $type = $questions[$pageID]["type"];
         require ('includes/phpValidation.php');
 
-        echo "<form action='$link.php' method='POST' onsubmit='return $type();'>
+        echo "<h2>Deine Gesundheit ist uns wichtig!</h2>
+              <form action='$link.php' method='POST' onsubmit='return $type();'>
               <div class='col-sm queryField'>
               <!--<<button type='button' class='btn btn-light' onclick='buttonChangeBrightDark()'>
                       i class='fa-solid fa-circle-half-stroke'></i></button></li>-->
