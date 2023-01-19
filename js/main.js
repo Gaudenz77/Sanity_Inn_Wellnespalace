@@ -211,7 +211,7 @@ function deleteAllCookies() {
       const name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
       document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
   }
-  window.location.href = "/index.php?seite=index";
+  window.location.href = "index.php";
 
 }
 
@@ -231,15 +231,15 @@ function buttonChangeBrightDark(){
 }
 function changeDark(){
   /* Pictures Bright off */
-  document.getElementById('logoBright').style.display = 'none';
+  //document.getElementById('logoBright').style.display = 'none'; beispiel
   /* Pictures Dark ein */
-  document.getElementById('logoDark').style.display = 'inline-flex';
+  //document.getElementById('logoDark').style.display = 'inline-flex'; beispiel
 }
 function changeBright(){
   /* Pictures Bright off */
-  document.getElementById('logoBright').style.display = 'inline-flex';
+  //document.getElementById('logoBright').style.display = 'inline-flex'; beispiel
   /* Pictures Dark on */
-  document.getElementById('logoDark').style.display = 'none';
+  //document.getElementById('logoDark').style.display = 'none'; beispiel
 }
 function changeBrightDark(){
   /* so oder so ??? */
@@ -274,16 +274,13 @@ function checkBrightDark(){
   }
 }
 var intervalChangeBrightDark;
+
 function startChangeBrightDark(){
   localStorage.setItem('isBrightDark' , 'Bright');
   let mustBrightDark = localStorage.getItem('mustBrightDark');
   if(!(mustBrightDark === 'Dark')){
       localStorage.setItem('mustBrightDark' , 'Bright');
   }
-  intervalChangeBrightDark = setInterval(function(){checkBrightDark();} , 1);
+  intervalChangeBrightDark = setInterval(function(){checkBrightDark();} , 10);
 }
-/* start header */
-
-  startChangeBrightDark();
-
  // END BRIGHT-DARK-TOGGLE ------------------------------------------------------------------------------------------

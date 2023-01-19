@@ -1,7 +1,11 @@
 <?php 
-require 'includes/session.php';
+require ('includes/session.php');
+require ('includes/head.php');
 ?>
 <body>
+  <?php
+    require ('includes/header.php');
+  ?>
 <main>
     <div class="container main">
       <div class="row"><div class="col">
@@ -12,11 +16,8 @@ require 'includes/session.php';
 <!-- Javascript-Validierung -->
 
         <?php
-        
-        require 'includes/head.php';
-        require 'includes/include_styles.php';
-        require 'includes/pseudo01.php';
-        require 'includes/header.php';
+        require ('includes/include_styles.php');
+        require ('includes/pseudo01.php');
 
         $pageID =  6;
         $pageid = $pageID + 1;

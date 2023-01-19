@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/d4cbcb96c8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico">
-    <script src="./js/main.js" defer></script>
+    <script src="./js/main.js"></script>
     <title>SANITY-INN-Wellness-Palace</title>
     <style>
       body {
@@ -23,6 +23,6 @@
         background-size:cover;
         background-repeat: no-repeat;
       }
-</style>
-   
+    </style>
   </head>
+  <script>startChangeBrightDark();</script>

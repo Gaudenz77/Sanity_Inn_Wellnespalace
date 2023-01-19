@@ -14,8 +14,14 @@
                   <li><a href="index.php" class="nav-link px-2">Homepage</a></li>
                   <li><a href="index_elves.php" class="nav-link px-2">Elvspeak</a></li>
                   <li><a href="#" class="nav-link px-2">Pricing</a></li>
+                  <li>
+                    <button type="button" class="btn btn-light" onclick="buttonChangeBrightDark()">
+                      <i class="fa-solid fa-circle-half-stroke"></i>
+                    </button>
+                  </li>
                 </ul>
           </div>
         </div>
       </div>
     </header>
+    

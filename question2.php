@@ -1,7 +1,11 @@
 <?php 
-require 'includes/session.php';
+require ('includes/session.php');
+require ('includes/head.php');
 ?>
 <body>
+  <?php
+    require ('includes/header.php');
+  ?>
 <main>
     <div class="container main">
       <div class="row"><div class="col">
@@ -12,11 +16,8 @@ require 'includes/session.php';
 <!-- Javascript-Validierung -->
 
         <?php
-
-        require 'includes/head.php';
-        require 'includes/include_styles.php';
-        require 'includes/pseudo01.php';
-        require 'includes/header.php';
+        require ('includes/include_styles.php');
+        require ('includes/pseudo01.php');
 
         $pageID =  1;
         $pageid = $pageID + 1;
@@ -50,7 +51,6 @@ require 'includes/session.php';
 
         echo  "<input type='hidden' name='type' value='$type' id='type'>
               <input type='hidden' name='lastPageID' value='$page'>
-              <input type='hidden' name='type' value='$type' value=''>
               <span id='sliderValue'></span><br>
               <div class='btn-group' role='group' aria-label='Basic mixed styles example'>
               <button type='button' class='btn btn-danger'><a href='index.php'>Zurück</a></button>
