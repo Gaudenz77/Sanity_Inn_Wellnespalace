@@ -7,7 +7,7 @@
             </div>
           </div>
      
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start linkhead">
             
                 <ul class="nav col-12 col-lg-auto me-lg-auto justify-content-center mb-md-auto bg-warning">
                   <li><a href="index.php" class="nav-link px-2">Homepage</a></li>

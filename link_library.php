@@ -44,7 +44,7 @@
 
 
 
-<!-- buttons version self working  (when using only class button without explicit <button>-tag type="submit" is NT working) -->
+<!-- buttons version self working  (when using only class button without explicit <button>-tag type='submit' is NT working) -->
 
 <div class='button-container'>
 <button i class='fa-regular fa-circle-left btn text-center' type='button' id='testBtns'><p class='icnbtns'><a href='index.php' style='text-decoration: none;'>BACK</a></p></i>
@@ -70,6 +70,10 @@
 <i class='fa-regular fa-circle-left'></i>
 <i class='fa-solid fa-rotate-right'></i>
 <i class='fa-regular fa-circle-right'></i>
+
+<h1 class='titleresult'>Das perfekte Abo für Dich:</h1>
+
+<img src='...' class='img-fluid' alt='...'>
 
 </body>
 </html>

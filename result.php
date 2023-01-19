@@ -20,24 +20,25 @@ require ('includes/head.php');
         require ('includes/pseudo01.php');
         $pageid =  9;
         /* require 'includes/phpValidation.php'; */
+        echo "<div class='container'>
+        <div class='row <!-- -fluid --> justify-content-center'>
+        <div class='col-sm-5 bg-secondary p-5'>
+        <h2 class='text-center'>Das perfekte Abo für Dich:</h2>
+
+
+        <img src='assets/img/sanity_inn_header_pic_day.jpg' class='img-fluid rounded-circle p-2' alt='...'>";
+
         $prüfung = 'hacker';
         switch($prüfung){
           case 'hacker':
-            echo "<p id='validateAllquestion'>Wenn Du nicht richtig ausfüllst, können wir Dich auch nicht richtig beraten!</p>";
+            echo "<div class='one'><p id='validateAllquestion'>Wenn Du nicht richtig ausfüllst, können wir Dich auch nicht richtig beraten!</p></div>";
           case 'helthy':
-            echo "<p id='validateAllquestion'>Super, Du bist kern gesund! Wir empfehlen das Top-Abo, damit das auch so bleibt.</p>";
+            echo "<div class='one'><p id='validateAllquestion'>Super, Du bist kern gesund! Wir empfehlen das Top-Abo, damit das auch so bleibt.</p></div>";
           case 'unhalthi':
-            echo "<p id='validateAllquestion'>Wir empfehlen das Top-Abo, damit das auch so bleibt./p>";
+            echo "<div class='one'><p id='validateAllquestion'>Wir empfehlen das Top-Abo, damit das auch so bleibt.</p></div>
+            </div>";
         }
-
-        echo "<div class='container'>
-        <div class='row justify-content-center'>
-            <div class='col-sm bg-secondary p-2'>
-                <div class='one'>Wenn Du nicht richtig ausfüllst, können wir Dich auch nicht richtig beraten!</div>
-                <div class='one'>Super, Du bist kern gesund! Wir empfehlen das Top-Abo, damit das auch so bleibt.</div>
-                <div class='one'>Wir empfehlen das Top-Abo, damit das auch so bleibt.</div>
-            </div>
-            <div class='col-sm bg-secondary p-2'>
+        echo "<div class='col-sm-7 bg-secondary p-2'>
             <div class='table-responsive'>
                 <table class='table table-dark table-striped'>
                     <thead>
@@ -57,8 +58,36 @@ require ('includes/head.php');
                             <td>Antwort No. 2</td>
                         </tr>
                         <tr class=''>
-                            <td scope='row'>Frage No. 2</td>
-                            <td>Antwort No. 2</td>
+                            <td scope='row'>Frage No. 3</td>
+                            <td>Antwort No. 3</td>
+                        </tr>
+                        <tr class=''>
+                            <td scope='row'>Frage No. 4</td>
+                            <td>Antwort No. 4</td>
+                        </tr>
+                        <tr class=''>
+                            <td scope='row'>Frage No. 5</td>
+                            <td>Antwort No. 5</td>
+                        </tr>
+                        <tr class=''>
+                            <td scope='row'>Frage No. 6</td>
+                            <td>Antwort No. 6</td>
+                        </tr>
+                        <tr class=''>
+                            <td scope='row'>Frage No. 7</td>
+                            <td>Antwort No. 7</td>
+                        </tr>
+                        <tr class=''>
+                            <td scope='row'>Frage No. 8</td>
+                            <td>Antwort No. 8</td>
+                        </tr>
+                        <tr class=''>
+                            <td scope='row'>Frage No. 9</td>
+                            <td>Antwort No. 9</td>
+                        </tr>
+                        <tr class=''>
+                            <td scope='row'>Frage No. 10</td>
+                            <td>Antwort No. 10</td>
                         </tr>
                     </tbody>
                 </table>
