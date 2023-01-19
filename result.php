@@ -38,7 +38,7 @@ require ('includes/head.php');
             echo "<div class='one'><p id='validateAllquestion'>Wir empfehlen das Top-Abo, damit das auch so bleibt.</p></div>
             </div>";
         }
-        echo "<div class='col-sm-7 bg-secondary p-2'>
+        echo "<div class='col-sm-7 p-2'>
             <div class='table-responsive'>
                 <table class='table table-dark table-striped'>
                     <thead>

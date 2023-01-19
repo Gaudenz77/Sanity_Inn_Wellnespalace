@@ -11,7 +11,8 @@ font-size: 20px;
 }
 
 .main {
-  margin-top: 120px;
+  margin-top: 280px;
+  margin-bottom:100px;
 }
 
 .bodyDark {
@@ -28,7 +29,7 @@ font-size: 20px;
   position:fixed;
   width:100%;
   top:0;
-  height: 25%; 
+  height: 22%; 
   z-index: 1;
   color:#f8f9fa;
   left: 0;
@@ -42,7 +43,7 @@ font-size: 20px;
     position:fixed;
     width:100%;
     top:0;
-    height: 25%; 
+    height: 20%; 
     z-index: 1;
     color:#f8f9fa;
     left: 0;
@@ -50,7 +51,7 @@ font-size: 20px;
 
 .linkhead {
   width:max-content;
-  margin-top: -30px;
+  margin-top: -40px;
   background-color:rgba(84, 83, 83, 0.783);
   border-radius: 5px;
   color:black;
