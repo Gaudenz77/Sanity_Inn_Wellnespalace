@@ -10,7 +10,7 @@
 ----
 ## Problems faced
 * Github synchronization was very harsh. Sometimes it took things into code that we changed, sometimes it didn't. We are not sure if there was a probölem with the basic setup at the start. 
-### SOLUTION: We test it out in a sample-project to learn how to do it correctly. The Github-problems lead to time-problems and lots of not fully finished elements (folder structure, website basic layout, missingjavascript-number validation)
+* SOLUTION: We test it out in a sample-project to learn how to do it correctly. The Github-problems lead to time-problems and lots of not fully finished elements (folder structure, website basic layout, missingjavascript-number validation)
 
 ## Final thoughts
 ---
